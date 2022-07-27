@@ -3,4 +3,5 @@ const menu = document.querySelector(".navbar__links");
 
 burgerButton.addEventListener("click", function () {
   menu.classList.toggle("active");
+  burgerButton.classList.toggle("active");
 });
