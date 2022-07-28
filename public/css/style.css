@@ -18,7 +18,6 @@ body {
     background-color: #F5F3F5;
     margin: 0;
     padding: 0;
-    border: 1px solid black;
 }
 
 /***********************************  HEADER *********************************************/
@@ -26,7 +25,6 @@ body {
 header {
     width: 100%;
     height: 4rem;
-    border: 1px solid black;
 }
 .navbar {
     width:100%;
@@ -39,19 +37,29 @@ header {
     position: fixed;
     top: 0;
     background-color: #F5F3F5;
-    border: 1px solid pink;
 }
 
-/*.navbar__authentication {
-    width: 10%;
+.iconify {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #AB875F;
+}
+
+/*.navbar__authentication__connexion {
+    width: 3rem;
+    height: 3rem;
+}
+
+.navbar__authentication__inscription {
+    width: 3rem;
+    height: 3rem;
 }*/
 
-
-.navbar__authentication a img {
+/*.navbar__authentication a img {
     width: 1rem;
     height: 1rem;
-    /*padding: .2rem;*/
-}
+    padding: .2rem;
+}*/
 
 .navbar__logo {
     /*width: 60%;*/
@@ -80,7 +88,7 @@ header {
     height: 2.5rem;
     position: relative;
     cursor: pointer;
-    margin-right: 2rem;
+    /*margin-right: 2rem;*/
 }
 
 .navbar__burger span {
@@ -167,18 +175,23 @@ header {
     background-color: rgba(191,170,143,1);
 }
 
+
+/*********************************** Main **************************************************/
+
+main {
+    margin-top: 6rem;
+}
+
 /******************************* section Welcome *******************************************/
 
-.welcome {
+#welcome {
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 6rem;
-    border: 1px solid red;
 }
 
-.welcome h2 {
+#welcome h2 {
     font-size: 5rem;
     text-align: center;
     text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
@@ -188,16 +201,16 @@ header {
     text-transform: uppercase;
 }
 
-.welcome figure {
+#welcome figure {
     width: 0 auto;
 }
 
-.welcome figure img {
+#welcome figure img {
     width:28rem;
     height: 20rem;
 }
 
-.welcome p {
+#welcome p {
     margin: 0;
     padding: 0;
     text-align: center;
@@ -208,16 +221,15 @@ header {
 
 /*********************************** section About ********************************************/
 
-.about {
+#about {
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    border: 1px solid green;
 }
 
-.about h2 {
+#about h2 {
     font-size: 5rem;
     text-align: center;
     text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
@@ -227,13 +239,13 @@ header {
     padding-bottom: 2rem;
 }
 
-.about figure img {
+#about figure img {
     width:18rem;
     height: 18rem;
     border-radius: 60% 30%;
 }
 
-.about p {
+#about p {
     padding: 0 2rem;
 }
 
@@ -247,12 +259,12 @@ header {
 
 /**************************************** Section Services ******************************************/
 
-.services {
+#services {
     width: 100%;
     text-align: center;
 }
 
-.services h2 {
+#services h2 {
     text-align: center;
     font-size: 3rem;
     margin: 0;
@@ -343,24 +355,93 @@ header {
 
 /**************************************** Section Offres *****************************************/
 
-.offres {
+#offres {
     width: 100%;
     align-items: center;
     text-align: center;
-    border: 1px solid blue;
 }
 
-.offres h2 {
+#offres h2 {
     margin: 0;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    font-size: 4rem;
+    font-size: 3rem;
     text-transform: uppercase;
 }
 
-.offres img {
+#offres img {
     width: 15rem;
     height: 25rem;
+}
+
+.offres__confort {
+    margin-bottom: 4rem;
+}
+
+.offres__serenite {
+    margin-bottom: 4rem;
+}
+
+.offres__epanouissement {
+    margin-bottom: 2rem;
+}
+
+.offres__bold {
+    font-weight: bold;
+}
+
+.offres__color {
+    color: #56432e;
+}
+
+/*************************************** Section Travailler avec moi *****************************/
+
+.etape {
+    width: 100%;
+}
+
+.etape h2 {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.etape__une h3 {
+    margin: 0;
+    padding-left: 2rem;
+    color: #AB875F;
+}
+
+.etape__une p {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.etape__deux h3 {
+    margin: 0;
+    padding-left: 7rem;
+    color: #AB875F;
+}
+
+.etape__deux p {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.etape__trois h3 {
+    margin: 0;
+    padding-left: 2rem;
+    color: #AB875F;
+}
+
+.etape__trois p {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
 }
 
 /**************************************** Footer *************************************************/
@@ -477,6 +558,8 @@ footer {
     width: 2rem;
     height: 2rem
 }
+
+/********************************** Page connexion ******************************************/
 
 
 

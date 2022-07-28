@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Final</title>
+    <title>Leyila's Agency</title>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
@@ -13,52 +14,55 @@
 <body>
 
     <header>
-        <nav class="navbar" role="navigation">
+        <nav class="navbar">
             
             <div class="navbar__authentication">
                 <!-- icon connexion -->
-                <a href="index.php?route=connexion" class="navbar__authentication__connexion"><img src="../public/img/utilisateur.png"></a>
-
-                <!-- icon inscription -->
-                <a href="index.php?route=inscription" class="navbar__authentication__inscription"><img src="../public/img/enter.png"></a>
+                <a href="index.php?route=connexion"><span class="iconify" data-icon="bxs:user"></span></a>
             </div>
             
+            <!-- Logo du site -->
             <div class="navbar__logo">
                 <a href="index.php" class="navbar__logo"><h1>Leyla's Agency</h1></a>
             </div>
             
+
+            <!-- Menu burger -->
             <div class="navbar__burger">
-                <!--<img src="../public/img/burger.svg">-->
                 <span></span>
             </div>
 
+            <!-- Menu de navigation -->
             <ul class="navbar__links">
                 <li>
-                    <a href="#" class="navbar-links">A propos</a>
+                    <a href="#about" class="navbar-links">A propos</a>
                 </li>  
                 <li>
-                    <a href="#" class="navbar-links">Mes offres</a>
+                    <a href="#offres" class="navbar-links">Mes offres</a>
                 </li>  
                 <li>
-                    <a href="#" class="navbar-links">Mes services</a>
+                    <a href="#services" class="navbar-links">Mes services</a>
                 </li>
                 <li>
-                    <a href="#" class="navbar-links">Contact</a>
+                    <a href="#contact" class="navbar-links">Contact</a>
                 </li>
                 <li>
-                    <a href="index.php?route=connexion" class="navbar-links">Se connecter</a>
+                    <a href="index.php?route=user" class="navbar-links">Mon Compte</a>
                 </li>
                 <li>
-                    <a href="index.php?route=inscription" class="navbar-links">S'inscrire</a>
+                    <a href="index.php?route=admin" class="navbar-links">Le compte</a>
                 </li>
             </ul>
         </nav>
     </header>
     
     <main>
+        <!-- Contenu du site qui change suivant ce que l'on fait -->
         <?php include_once $view; ?>
     </main>
-    <footer>
+
+    <footer id="contact">
+        <!-- Bloc qui contient le mail et le telephone -->
         <div class="contact">
             <div class="contact__mail">
                 <img class="contact__mail__logo" src="../public/img/mail.png" alt="logo mail">
@@ -70,13 +74,14 @@
             </div>
         </div>
 
+        <!-- Bloc qui contient l'accees aux reseaux sociaux -->
         <div class="reseaux">
             <div class="reseaux__insta">
-                <img class="reseaux__insta__logo" src="../public/img/instagram.png" alt="logo mail">
+                <img class="reseaux__insta__logo" src="../public/img/instagram.png" alt="logo instagram">
                 <a class="reseaux__insta__text" href="#">Instagram</a>
             </div>
             <div class="reseaux__facebook">
-                <img class="reseaux__facebook__logo" src="../public/img/facebook.png" alt="logo mail">
+                <img class="reseaux__facebook__logo" src="../public/img/facebook.png" alt="logo facebook">
                 <a class="reseaux__facebook__text" href="https://www.facebook.com/leyilas.agency/">Facebook</a>
             </div>
         </div>

@@ -8,4 +8,6 @@
     <button type="submit">Connexion</button>
 </form>
 
+<button><a href="index.php?route=inscription">Inscription</a></button>
+
 </section>

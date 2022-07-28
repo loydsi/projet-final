@@ -16,6 +16,23 @@ if( array_key_exists( 'route', $_GET ) )
 			$view = 'connexion.php';
             include_once 'view/layout.php';
 			break;
+		case 'user':
+			$view = 'userProfil.php';
+            include_once 'view/layout.php';
+			break;
+		case 'userdata':
+			$view = 'userDataCompany.php';
+			include_once 'view/layout.php';
+			break;
+		case 'updateUser':
+			$view = 'userUpdate.php';
+			include_once 'view/layout.php';
+		case 'userfacture':
+			$view = 'userFacture.php';
+			include_once 'view/layout.php';
+		case 'userdevis':
+			$view = 'userDevis.php';
+			include_once 'view/layout.php';
 	}
 }
 else

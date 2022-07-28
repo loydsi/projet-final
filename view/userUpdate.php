@@ -1,11 +1,7 @@
-<section class="inscription">
-
-<form action="" name="inscription">
+<section class="updateUser">
+    <h2>Modifier Nom Entrprise</h2>
+    <form action="" name="inscription">
     <h1>S'inscrire</h1>
-    <div>
-        <label for="namecompany">Nom de L'entreprise</label>
-        <input type="text" name="namecompany" id="namecompany" placeholder="Nom de L'entreprise">
-    </div>
     <div>
         <label for="email">Email</label>
         <input type="email" name="email" id="email" placeholder="email">
@@ -34,7 +30,6 @@
         <label for="password">Mot de passe</label>
         <input type="password" name="password" id="password" placeholder="Mot de passe">
     </div>
-    <button type="submit">S'inscrire</button>
+    <button type="submit">Modifier</button>
 </form>
 </section>
-
