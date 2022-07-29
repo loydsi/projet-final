@@ -24,20 +24,22 @@ body {
 
 header {
     width: 100%;
-    height: 4rem;
+    position: fixed;
+    top: 0;
 }
+
 .navbar {
-    width:100%;
-    /*height: 5rem;*/
+    /*width:100%;*/
     padding:1rem;
     display:flex;
 	align-items: center;
 	justify-content: space-between;
-    /*border-bottom: .1rem solid black;*/
-    position: fixed;
-    top: 0;
+    /*position: fixed;
+    top: 0;*/
     background-color: #F5F3F5;
 }
+
+/*********************************** Icon de connexion **************************/
 
 .iconify {
     width: 2.5rem;
@@ -45,24 +47,9 @@ header {
     color: #AB875F;
 }
 
-/*.navbar__authentication__connexion {
-    width: 3rem;
-    height: 3rem;
-}
-
-.navbar__authentication__inscription {
-    width: 3rem;
-    height: 3rem;
-}*/
-
-/*.navbar__authentication a img {
-    width: 1rem;
-    height: 1rem;
-    padding: .2rem;
-}*/
+/*********************************** Logo du site **************************/
 
 .navbar__logo {
-    /*width: 60%;*/
     display: flex;
     justify-content: center;
 }
@@ -71,24 +58,24 @@ header {
     text-decoration: none;
 }
 
+
 .navbar__logo a h1{
-    /*width: 100%;*/
     text-shadow: 0.1rem 0.1rem 0.2rem #56432e;
     color: #AB875F;
     font-size: 2.7rem;
     padding: 2rem;
     text-align: center;
-    /*letter-spacing: .2rem;*/
     font-family: 'Indie Flower', cursive;
     margin: 0;
 }
+
+/*********************************** Menu burger **************************/
 
 .navbar__burger {
     width: 2.2rem;
     height: 2.5rem;
     position: relative;
     cursor: pointer;
-    /*margin-right: 2rem;*/
 }
 
 .navbar__burger span {
@@ -129,6 +116,8 @@ header {
   .navbar__burger.active span::after {
     transform: translateY(0) rotateZ(-45deg);
   }
+
+/*********************************** Liens menu **************************/
 
 .navbar__links {
     list-style-type: none;
@@ -179,7 +168,7 @@ header {
 /*********************************** Main **************************************************/
 
 main {
-    margin-top: 6rem;
+    margin-top: 11rem;
 }
 
 /******************************* section Welcome *******************************************/
@@ -273,6 +262,8 @@ main {
     text-transform: uppercase;
 }
 
+/*********************************** Service Administratif **************************/
+
 .services__administratif {
     width: 25rem;
     background-color: rgb(191 170 143);
@@ -292,6 +283,8 @@ main {
     margin: 0;
     text-align: left;
 }
+
+/*********************************** Service commerciale  **************************/
 
 .services__commerciale {
     width: 25rem;
@@ -313,6 +306,8 @@ main {
     text-align: left;
 }
 
+/*********************************** Service reseaux **************************/
+
 .services__reseaux {
     width: 25rem;
     background-color: rgb(191 170 143);
@@ -332,6 +327,8 @@ main {
     margin: 0;
     text-align: left;
 }
+
+/*********************************** Service autres **************************/
 
 .services__autres {
     width: 25rem;
@@ -457,6 +454,8 @@ footer {
 
 }
 
+/*********************************** Footer contact **************************/
+
 .contact {
     width: 17rem;
     height: 8rem;
@@ -501,6 +500,8 @@ footer {
     padding: 1rem;
     margin: 0;
 }
+
+/*********************************** Footer reseaux **************************/
 
 .reseaux {
     width: 17rem;

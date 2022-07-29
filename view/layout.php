@@ -35,16 +35,16 @@
             <!-- Menu de navigation -->
             <ul class="navbar__links">
                 <li>
-                    <a href="#about" class="navbar-links">A propos</a>
+                    <a href="index.php?route=home#about" class="navbar-links">A propos</a>
                 </li>  
                 <li>
-                    <a href="#offres" class="navbar-links">Mes offres</a>
+                    <a href="index.php?route=home#offres" class="navbar-links">Mes offres</a>
                 </li>  
                 <li>
-                    <a href="#services" class="navbar-links">Mes services</a>
+                    <a href="index.php?route=home#services" class="navbar-links">Mes services</a>
                 </li>
                 <li>
-                    <a href="#contact" class="navbar-links">Contact</a>
+                    <a href="index.php?route=home#contact" class="navbar-links">Contact</a>
                 </li>
                 <li>
                     <a href="index.php?route=user" class="navbar-links">Mon Compte</a>

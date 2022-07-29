@@ -1,17 +1,11 @@
-<section class="devis">
+<section class="user__devis">
+    <a href="index.php?route=user"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtlNsNgzAQBIcO0gkpgZSQSmgh6SgdQAnQSUpAJ4F0imLfGsMf/rZmbtePhpNXczKfSxA2XFLRDeiBd0h1G1SBwQfgvgpeqkQRePgMdMD3KEEV3IbIJaiG5wSHwFMCD1erTg77ryITjEBbQk/VnToDL5mAR8nN8YNFh7wl2S2J3kF1kkhgaaskiuBX8gQ+6gVQBZvEvgkZHr1kdcjsvpIEu4SXIKxtAb+eIBmkl/3TAAAAAElFTkSuQmCC" alt="retour en arriere"/></a>
+    <h2>Mes Données</h2>
     <h2>Devis</h2>
-    <div class="devis">
-        <div class="devis__company__name">
-            <p>devis 1</p>
-            <p>devis 2</p>
-            <p>devis 3</p>
-            <p>devis 4</p>
-        </div>
-        <div class="devis__company__bdd">
-            <button>Telecharger</button>
-            <button>Telecharger</button>
-            <button>Telecharger</button>
-            <button>Telecharger</button>
-        </div>
-    </div>
+    <table>
+        <tr>
+            <td>Devis 1</td>
+            <td>Telecharger</td>
+        </tr>
+    </table>
 </section>

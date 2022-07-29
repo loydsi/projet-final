@@ -1,17 +1,11 @@
-<section class="facture">
+<section class="user__facture">
+    <a href="index.php?route=user"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtlNsNgzAQBIcO0gkpgZSQSmgh6SgdQAnQSUpAJ4F0imLfGsMf/rZmbtePhpNXczKfSxA2XFLRDeiBd0h1G1SBwQfgvgpeqkQRePgMdMD3KEEV3IbIJaiG5wSHwFMCD1erTg77ryITjEBbQk/VnToDL5mAR8nN8YNFh7wl2S2J3kF1kkhgaaskiuBX8gQ+6gVQBZvEvgkZHr1kdcjsvpIEu4SXIKxtAb+eIBmkl/3TAAAAAElFTkSuQmCC" alt="retour en arriere"/></a>
+    <h2>Mes Données</h2>
     <h2>Facture</h2>
-    <div class="factures__company">
-        <div class="factures__company__name">
-            <p>factures 1</p>
-            <p>factures 2</p>
-            <p>factures 3</p>
-            <p>factures 4</p>
-        </div>
-        <div class="factures__company__bdd">
-            <button>Telecharger</button>
-            <button>Telecharger</button>
-            <button>Telecharger</button>
-            <button>Telecharger</button>
-        </div>
-    </div>
+    <table>
+        <tr>
+            <td>Facture 1</td>
+            <td>Telecharger</td>
+        </tr>
+    </table>
 </section>
