@@ -1,8 +1,8 @@
 <section class="inscription">
 
 <form action="index.php?route=user" name="inscription">
-    <h1>S'inscrire</h1>
-    <div>
+    <h2>S'inscrire</h2>
+    <div> <!-- article --> 
         <label for="namecompany">Nom de L'entreprise</label>
         <input type="text" name="namecompany" id="namecompany" placeholder="Nom de L'entreprise">
     </div>

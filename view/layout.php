@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leyila's Agency</title>
+    <script src="https://kit.fontawesome.com/997c887ce5.js" crossorigin="anonymous"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,22 +18,18 @@
         <nav class="navbar">
             
             <div class="navbar__authentication">
-                <!-- icon connexion -->
                 <a href="index.php?route=connexion"><span class="iconify" data-icon="bxs:user"></span></a>
             </div>
             
-            <!-- Logo du site -->
             <div class="navbar__logo">
                 <a href="index.php" class="navbar__logo"><h1>Leyla's Agency</h1></a>
             </div>
             
 
-            <!-- Menu burger -->
             <div class="navbar__burger">
                 <span></span>
             </div>
 
-            <!-- Menu de navigation -->
             <ul class="navbar__links">
                 <li>
                     <a href="index.php?route=home#about" class="navbar-links">A propos</a>

@@ -3,22 +3,64 @@
 /*  font-family: 'Montserrat', sans-serif;  */
 /*  font-family: 'Life Savers', cursive;  */
 
+/*:root {
+    --bg-color1: rgb(11, 22, 34);
+    --bg-color2: rgb(21, 31, 46);
+    --font-color: rgb(255, 255, 255);
+    --secondary-color: rgb(246, 128, 191);
+}*/
+
+/*body {
+    background-color: var(--bg-color1);
+}*/
+
+/************************************** Variables ************************************************/
+:root {
+    --color-one: #F5F3F5;
+    --color-two: #AB875F;
+    --color-three: rgb(191 170 143);
+    --font-text1: 'Montserrat', sans-serif;
+    --font-text2: 'Indie Flower', cursive;
+    --font-text3: 'Life Savers', cursive;
+    --size-h3: 1.8rem;
+    --size-text: 1.6rem;
+}
+
+
+/************************************** Reset ************************************************/
 * {
     box-sizing: border-box;
 }
 
 html {
 	font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-text1);
+    background-color: var(--color-one);
+    margin: 0;
+    padding: 0;
+    font-size: var(--size-text);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+p {
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #F5F3F5;
+h3 {
     margin: 0;
     padding: 0;
 }
+
+
+
 
 /***********************************  HEADER *********************************************/
 
@@ -34,9 +76,7 @@ header {
     display:flex;
 	align-items: center;
 	justify-content: space-between;
-    /*position: fixed;
-    top: 0;*/
-    background-color: #F5F3F5;
+    background-color: var(--color-one);
 }
 
 /*********************************** Icon de connexion **************************/
@@ -44,7 +84,7 @@ header {
 .iconify {
     width: 2.5rem;
     height: 2.5rem;
-    color: #AB875F;
+    color: var(--color-two);
 }
 
 /*********************************** Logo du site **************************/
@@ -61,11 +101,11 @@ header {
 
 .navbar__logo a h1{
     text-shadow: 0.1rem 0.1rem 0.2rem #56432e;
-    color: #AB875F;
+    color: var(--color-two);
     font-size: 2.7rem;
     padding: 2rem;
     text-align: center;
-    font-family: 'Indie Flower', cursive;
+    font-family: var(--font-text2);
     margin: 0;
 }
 
@@ -82,7 +122,7 @@ header {
     width: 100%;
     height: .3rem;
     display: block;
-    background-color: #AB875F;
+    background-color: var(--color-two);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -94,7 +134,7 @@ header {
     position: absolute;
     width: 100%;
     height: .3rem;
-    background-color: #AB875F;
+    background-color: var(--color-two);
   }
 
   .navbar__burger span::before {
@@ -138,7 +178,7 @@ header {
 }
 
 .navbar__links li a {
-    color: #F5F3F5;
+    color: var(--color-one);
     text-decoration: none;
     font-size: 2rem;
 }
@@ -149,12 +189,12 @@ header {
     position: absolute;
     width: 100%;
     height: 1rem;
-    background-color: #F5F3F5;
+    background-color: var(--color-one);
     transform: scale(0);
 }
 
 .navbar__links li :visited {
-    color: #F5F3F5;
+    color: var(--color-one);
 }
 
 .navbar__links.active {
@@ -185,7 +225,7 @@ main {
     text-align: center;
     text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
     padding: 1rem 0 0 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-text1);
     margin: 0;
     text-transform: uppercase;
 }
@@ -203,8 +243,8 @@ main {
     margin: 0;
     padding: 0;
     text-align: center;
-    font-size: 1.6rem;
-    font-family: 'Life Savers', cursive;
+    font-size: 1.8rem;
+    font-family: var(--font-text3);
     padding-bottom: 1rem;
 }
 
@@ -222,7 +262,7 @@ main {
     font-size: 5rem;
     text-align: center;
     text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
-    font-family: 'Indie Flower', cursive;
+    font-family: var(--font-text2);
     margin: 0;
     padding-top: 1rem;
     padding-bottom: 2rem;
@@ -235,7 +275,8 @@ main {
 }
 
 #about p {
-    padding: 0 2rem;
+    padding: 1.6rem 1.6rem;
+    font-size: 1.6rem;
 }
 
 .about__leila__bold {
@@ -244,6 +285,7 @@ main {
 
 .about__leila__color {
     color: #56432e;
+    text-shadow: 0.1rem 0.1rem 0.1rem var(--color-two);
 }
 
 /**************************************** Section Services ******************************************/
@@ -251,6 +293,8 @@ main {
 #services {
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #services h2 {
@@ -260,94 +304,139 @@ main {
     padding-top: 2rem;
     padding-bottom: 2rem;
     text-transform: uppercase;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
 }
 
 /*********************************** Service Administratif **************************/
 
 .services__administratif {
     width: 25rem;
-    background-color: rgb(191 170 143);
+    background-color: var(--color-three);
     margin: 0 auto;
     margin-bottom: 2rem;
+    border-radius: 20%;
 }
 
 .services__administratif h3 {
     margin: 0;
-    padding-top: 1rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
 }
 
 .services__administratif ul {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    list-style-type: circle;
+    list-style-type: disc;
     margin: 0;
     text-align: left;
+}
+
+.services__administratif ul li {
+    font-size: 1.6rem;
+    list-style-image: url(/public/img/check.svg);
+    padding: .5rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
 }
 
 /*********************************** Service commerciale  **************************/
 
 .services__commerciale {
     width: 25rem;
-    background-color: rgb(191 170 143);
+    background-color: var(--color-three);
     margin: 0 auto;
     margin-bottom: 2rem;
+    border-radius: 20%;
 }
 
 .services__commerciale h3 {
     margin: 0;
-    padding-top: 1rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
 }
 
 .services__commerciale ul {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    list-style-type: circle;
+    list-style-type: disc;
     margin: 0;
     text-align: left;
+}
+
+.services__commerciale ul li {
+    font-size: 1.6rem;
+    list-style-image: url(/public/img/check.svg);
+    padding: .5rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
 }
 
 /*********************************** Service reseaux **************************/
 
 .services__reseaux {
     width: 25rem;
-    background-color: rgb(191 170 143);
+    background-color: var(--color-three);
     margin: 0 auto;
     margin-bottom: 2rem;
+    border-radius: 20%;
 }
 
 .services__reseaux h3 {
     margin: 0;
-    padding-top: 1rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
 }
 
 .services__reseaux ul {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    list-style-type: circle;
+    list-style-type: disc;
     margin: 0;
     text-align: left;
+}
+
+.services__reseaux ul li {
+    font-size: 1.6rem;
+    list-style-image: url(/public/img/check.svg);
+    padding: .5rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
 }
 
 /*********************************** Service autres **************************/
 
 .services__autres {
     width: 25rem;
-    background-color: rgb(191 170 143);
+    background-color: var(--color-three);
     margin: 0 auto;
     margin-bottom: 2rem;
+    border-radius: 20%;
 }
 
 .services__autres h3 {
     margin: 0;
-    padding-top: 1rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
 }
 
 .services__autres ul {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    list-style-type: circle;
+    list-style-type: disc;
     margin: 0;
     text-align: left;
+}
+
+.services__autres ul li {
+    font-size: 1.6rem;
+    list-style-image: url(/public/img/check.svg);
+    padding: .5rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
 }
 
 /**************************************** Section Offres *****************************************/
@@ -356,6 +445,8 @@ main {
     width: 100%;
     align-items: center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #offres h2 {
@@ -364,6 +455,7 @@ main {
     padding-bottom: 2rem;
     font-size: 3rem;
     text-transform: uppercase;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
 }
 
 #offres img {
@@ -371,24 +463,95 @@ main {
     height: 25rem;
 }
 
+/*********************************** Offre confort *************************************************/
 .offres__confort {
     margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.offres__confort h3 {
+    font-size: 1.8rem;
+}
+
+.offres__confort p {
+    font-size: 1.6rem;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.offre__confort__prix {
+    background-color: black;
+    color: var(--color-one);
+    width: 30%;
+    border-radius: 15%;
+    border: .1rem solid var(--color-one);
+}
+
+/*********************************** Offre Serenite *************************************************/
 .offres__serenite {
     margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.offres__serenite h3 {
+    font-size: 1.8rem;
+}
+
+.offres__serenite p {
+    font-size: 1.6rem;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.offre__serenite__prix {
+    background-color: black;
+    color: var(--color-one);
+    width: 30%;
+    border-radius: 15%;
+    border: .1rem solid var(--color-one);
+}
+
+/*********************************** Offre Epanouissement *************************************************/
 .offres__epanouissement {
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.offres__epanouissement h3 {
+    font-size: 1.8rem;
+}
+
+.offres__epanouissement p {
+    font-size: 1.6rem;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.offre__epanouissement__prix {
+    background-color: black;
+    color: var(--color-one);
+    width: 30%;
+    border-radius: 15%;
+    border: .1rem solid var(--color-one);
 }
 
 .offres__bold {
     font-weight: bold;
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
 }
 
 .offres__color {
-    color: #56432e;
+    color: var(--color-two);
+    font-size: 1.6rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
+    margin-bottom: 1.6rem;
 }
 
 /*************************************** Section Travailler avec moi *****************************/
@@ -403,42 +566,53 @@ main {
     padding-bottom: 2rem;
     font-size: 3rem;
     text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    text-transform: uppercase;
 }
 
 .etape__une h3 {
     margin: 0;
     padding-left: 2rem;
-    color: #AB875F;
+    color: var(--color-two);
+    font-size: 1.8rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
 }
 
 .etape__une p {
     margin: 0;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
+    font-size: 1.6rem;
 }
 
 .etape__deux h3 {
     margin: 0;
     padding-left: 7rem;
-    color: #AB875F;
+    color: var(--color-two);
+    font-size: 1.8rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
 }
 
 .etape__deux p {
     margin: 0;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
+    font-size: 1.6rem;
 }
 
 .etape__trois h3 {
     margin: 0;
     padding-left: 2rem;
-    color: #AB875F;
+    color: var(--color-two);
+    font-size: 1.8rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
 }
 
 .etape__trois p {
     margin: 0;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
+    font-size: 1.6rem;
 }
 
 /**************************************** Footer *************************************************/
@@ -459,7 +633,7 @@ footer {
 .contact {
     width: 17rem;
     height: 8rem;
-    background-color: #F5F3F5;
+    background-color: var(--color-one);
     border-radius: 10% 10%;
     text-align: center;
 }
@@ -506,7 +680,7 @@ footer {
 .reseaux {
     width: 17rem;
     height: 8rem;
-    background-color: #F5F3F5;
+    background-color: var(--color-one);
     border-radius: 10% 10%;
     text-align: center;
 }
@@ -560,7 +734,493 @@ footer {
     height: 2rem
 }
 
-/********************************** Page connexion ******************************************/
+/********************************** Arrow ******************************************/
+.arrow {
+    width: 10%;
+    height: auto;
+    color: var(--color-two);
+}
 
 
+/********************************** Formulaire ******************************************/
 
+form {
+    border: .1rem solid var(--color-two);
+    padding: 1rem;
+    margin: 2rem;
+}
+
+form h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 1rem;
+}
+
+form input {
+    margin: 1rem;
+    border: .2rem solid var(--color-two);
+}
+
+form button {
+    margin: 1rem;
+    background-color: var(--color-two);
+    border: 0;
+    color: var(--color-one);
+    padding: .7rem;
+}
+
+.arrow {
+    background-color: var(--color-one);
+    color: var(--color-two);
+    text-align: left;
+    padding: 1rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
+}
+
+/********************************** Connexion ******************************************/
+.connexion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.connexion a {
+    background-color: var(--color-two);
+    color: #F5F3F5;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+}
+
+/********************************** Inscription ******************************************/
+.inscription {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.inscription label {
+    display: block;
+    font-family: var(--font-text1);
+    font-weight: bold;
+}
+
+.inscription div {
+    padding: 1rem;
+}
+
+/********************************** User ******************************************/
+.user {
+    width: 100%;
+}
+
+.user__profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.user__profil a {
+    padding: 2rem;
+    margin: 1rem;
+    width: 50%;
+    text-decoration: none;
+    color: var(--color-one);
+    text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
+    font-weight: bold;
+    font-size: var(--size-h3);
+    background-color: var(--color-two);
+}
+
+/********************************** Mes donnees ******************************************/
+.user__data {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.user__data h2 {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    text-transform: uppercase;
+}
+
+.user__data__company {
+    border: .1rem solid var(--color-two);
+    margin: 2rem;
+
+}
+
+.user__data__company td {
+    padding: 1rem;
+}
+
+.user__data__facture {
+    border: .1rem solid var(--color-two);
+    margin: 2rem;
+}
+
+.user__data__devis {
+    border: .1rem solid var(--color-two);
+    margin: 2rem;
+}
+
+.user__data__update {
+    padding: 2rem;
+    margin: 1rem;
+    text-decoration: none;
+    color: var(--color-one);
+    text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
+    font-weight: bold;
+    font-size: var(--size-h3);
+    background-color: var(--color-two);
+}
+/********************************** User update ******************************************/
+.user__update {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.user__update label {
+    display: block;
+    font-family: var(--font-text1);
+    font-weight: bold;
+}
+
+.user__update h2 {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    text-transform: uppercase;
+}
+
+/********************************** User facture ******************************************/
+
+.user__facture {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.user__facture h2 {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    text-transform: uppercase;
+}
+
+.user__facture_detail {
+    border: .1rem solid var(--color-two);
+    margin: 2rem;
+}
+
+/********************************** User devis ******************************************/
+
+.user__devis {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.user__devis h2 {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    text-transform: uppercase;
+}
+
+.user__devis__detail {
+    border: .1rem solid var(--color-two);
+    margin: 2rem;
+}
+
+/********************************** Admin ******************************************/
+.admin {
+    width: 100%;
+}
+
+.admin__profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.admin__profil a {
+    padding: 2rem;
+    margin: 1rem;
+    width: 50%;
+    text-decoration: none;
+    color: var(--color-one);
+    text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
+    font-weight: bold;
+    font-size: var(--size-h3);
+    background-color: var(--color-two);
+}
+
+/********************************** Admin company ******************************************/
+.company {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.company h2 {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    text-transform: uppercase;
+}
+
+.company__lien {
+    padding: 2rem;
+    margin: 1rem;
+    text-decoration: none;
+    color: var(--color-one);
+    text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
+    font-weight: bold;
+    font-size: var(--size-h3);
+    background-color: var(--color-two);
+}
+
+
+.company__list {
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.company__list {
+    border: .1rem solid var(--color-two);
+}
+
+.company__list__liens {
+    text-decoration: none;
+    color: #AB875F;
+    text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
+    font-weight: bold;
+}
+
+/********************************** Admin data company ******************************************/
+.admin__data__company {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin__data__company h2 {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    text-transform: uppercase;
+}
+
+.admin__data__company__list {
+    border: .1rem solid var(--color-two);
+    margin: 2rem;
+
+}
+
+.admin__data__company__list td {
+    padding: 1rem;
+}
+
+.admin__data__company__facture {
+    border: .1rem solid var(--color-two);
+    margin: 2rem;
+}
+
+.admin__data__company__devis {
+    border: .1rem solid var(--color-two);
+    margin: 2rem;
+}
+
+.admin__data__company__button {
+    padding: 2rem;
+    margin: 1rem;
+    text-decoration: none;
+    color: var(--color-one);
+    text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
+    font-weight: bold;
+    font-size: var(--size-h3);
+    background-color: var(--color-two);
+}
+
+/********************************** Admin update company ******************************************/
+.admin__update__company {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.admin__update__company label {
+    display: block;
+    font-family: var(--font-text1);
+    font-weight: bold;
+}
+
+.admin__update__company h2 {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    text-transform: uppercase;
+}
+
+/********************************** Admin add company ******************************************/
+.admin__add__company {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.admin__add__company label {
+    display: block;
+    font-family: var(--font-text1);
+    font-weight: bold;
+}
+
+.admin__add__company h2 {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    text-transform: uppercase;
+}
+
+/********************************** Admin facture ******************************************/
+
+.admin__facture {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.admin__facture__add {
+    background-color: var(--color-two);
+    color: #F5F3F5;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+}
+
+.admin__facture h2 {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    text-transform: uppercase;
+}
+
+.admin__facture__detail {
+    border: .1rem solid var(--color-two);
+    margin: 2rem;
+}
+
+/********************************** Admin add facture ******************************************/
+.admin__add__facture {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.admin__add__facture h2{
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    text-transform: uppercase;
+}
+
+/********************************** Admin devis ******************************************/
+
+.admin__devis {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.admin__devis__add {
+    background-color: var(--color-two);
+    color: #F5F3F5;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+}
+
+.admin__devis h2 {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    text-transform: uppercase;
+}
+
+.admin__devis__detail {
+    border: .1rem solid var(--color-two);
+    margin: 2rem;
+}
+
+/********************************** Admin add devis ******************************************/
+.admin__add__devis {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.admin__add__devis h2{
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    text-transform: uppercase;
+}

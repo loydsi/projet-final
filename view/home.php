@@ -71,7 +71,7 @@
             <li>Programmation de contenus</li>
             <li>Gestion de comptes Instagram, Facebook,
             Linkedin, Pinterest...</li>
-            <li>Réponses auxcommentaires et DM</li>
+            <li>Réponses aux commentaires et DM</li>
         </ul>
     </div>
     
@@ -96,7 +96,7 @@
         </figure>
         <h3>Offre confort</h3>
         <p>A partir de 8 heures par mois</p>
-        <p>320 €</p>
+        <p class="offre__confort__prix">320 €</p>
     </div>
 
     <div class="offres__serenite">
@@ -105,7 +105,7 @@
         </figure>
         <h3>Offre Sérénité</h3>
         <p>A partir de 20 heures par mois</p>
-        <p>770 €</p>
+        <p class="offre__serenite__prix">770 €</p>
     </div>
 
     <div class="offres__epanouissement">
@@ -114,7 +114,7 @@
         </figure>
         <h3>Offre Epanouissement</h3>
         <p>A partir de 30 heures par mois</p>
-        <p>1150 €</p>
+        <p class="offre__epanouissement__prix">1150 €</p>
     </div>
 
     <p class="offres__bold">Un devis vous sera proposé, si le besoin est supérieur à 30 Heures</p>
