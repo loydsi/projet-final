@@ -38,6 +38,7 @@
 
 <section id="services">
     <h2>Mes services / Mes missions</h2>
+    <div class="services__container">
     <div class="services__administratif">
         <h3>Assistante administrative</h3>
         <ul>
@@ -86,10 +87,12 @@
             <li>programmes, slides...</li>
         </ul>
     </div>
+    </div>
 </section>
 
 <section id="offres">
     <h2>Mes offres</h2>
+    
     <div class="offres__confort">
         <figure>
             <img src="../public/img/confort.jpg" alt="phoyo offre confort">

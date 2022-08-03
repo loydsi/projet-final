@@ -1,9 +1,9 @@
 <section class="admin__add__company">
     <a href="index.php?route=company" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
-
+    <h2>Ajouter une entreprise</h2>
 
 <form action="" name="">
-    <h2>Ajouter une entreprise</h2>
+    
     <div>
         <label for="namecompany">Nom de L'entreprise</label>
         <input type="text" name="namecompany" id="namecompany" placeholder="Nom de L'entreprise">

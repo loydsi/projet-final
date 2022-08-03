@@ -1,9 +1,9 @@
 <section class="admin__update__company">
     <a href="index.php?route=companydata" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
-
+    <h2>Modifier nom entreprise</h2>
 
 <form action="" name="">
-    <h1>Modifier nom entreprise</h1>
+    
     <div>
         <label for="namecompany">Nom de L'entreprise</label>
         <input type="text" name="namecompany" id="namecompany" placeholder="Nom de L'entreprise">
