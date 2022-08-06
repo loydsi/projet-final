@@ -89,11 +89,6 @@ header {
 
 /*********************************** Logo du site **************************/
 
-.navbar__logo {
-    display: flex;
-    justify-content: center;
-}
-
 .navbar__logo a {
     text-decoration: none;
 }
@@ -162,7 +157,6 @@ header {
 .navbar__links {
     list-style-type: none;
 	position: absolute;
-	/*bottom: -8rem;*/
     top: 8rem;
 	left: -100vw;
 	padding-left: 0;
@@ -641,18 +635,72 @@ main {
 
 footer {
     width: 100%;
-    /*height: 25rem;*/
     background-color: var(--color-two);
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
-    padding-left: 8rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
 
+footer a {
+    text-decoration: none;
+    color: var(--color-one);
+}
+
+footer a :visited {
+    color: var(--color-one);
+}
+
+footer h3 {
+    padding: 1rem;
+    font-family: var(--font-text2);
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    padding: .5rem;
+}
+
+footer p {
+    color: var(--color-one);
+}
+
+/**************************************** Footer liens *************************************************/
+.footer__liens {
+    width: 100%;
+    border-bottom: .1rem solid var(--color-one);
+    padding: 1rem;
+}
+/**************************************** Footer contact *************************************************/
+.footer__contact {
+    width: 100%;
+    border-bottom: .1rem solid var(--color-one);
+    padding: 1rem;
+}
+
+.footer__contact p {
+    padding: 1rem;
+}
+/**************************************** Footer mention *************************************************/
+.footer__mention {
+    padding: 1rem;
+    width: 100%;
+}
+
+.footer__mention p {
+    padding: 1rem;
 }
 
 /*********************************** Footer contact **************************/
 
-.contact {
+/*.contact {
     width: 17rem;
     height: 8rem;
     background-color: var(--color-one);
@@ -695,11 +743,11 @@ footer {
 .contact__tel__text {
     padding: 1rem;
     margin: 0;
-}
+}*/
 
 /*********************************** Footer reseaux **************************/
 
-.reseaux {
+/*.reseaux {
     width: 17rem;
     height: 8rem;
     background-color: var(--color-one);
@@ -754,7 +802,7 @@ footer {
 .reseaux img {
     width: 2rem;
     height: 2rem
-}
+}*/
 
 /********************************** Arrow ******************************************/
 .arrow {
@@ -1304,7 +1352,7 @@ form button {
     }
     /*********************************** section About ********************************************/
     #about h2 {
-        font-size: 7rem;
+        font-size: 6rem;
         margin-top: 2rem;
     }
 
@@ -1377,7 +1425,7 @@ form button {
 
 /*************************************** Section Travailler avec moi *****************************/
     .etape h2 {
-        font-size: 5rem;
+        font-size: 6rem;
     }
 
     .etape h3 {
@@ -1403,6 +1451,22 @@ form button {
     .etape__trois {
         margin-bottom: 4rem;
     }
+
+/**************************************** Footer *************************************************/
+    footer {
+        flex-direction: row;
+    }
+
+    .footer__liens {
+        border-right: .1rem solid var(--color-one);
+        border-bottom: 0;
+    }
+
+    .footer__contact {
+        border-right: .1rem solid var(--color-one);
+        border-bottom: 0;
+    }
+
 
 /********************************** Connexion ******************************************/
     .connexion form {
@@ -1650,5 +1714,93 @@ form button {
     .admin__add__devis button {
         width: 35%;
         font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /***********************************  HEADER *********************************************/
+
+    .navbar {
+        justify-content: center;
+    }
+    /***********************************  LOGO *********************************************/
+    .navbar__logo a h1 {
+        font-size: 4.2rem;
+    }
+    /***********************************  icone authentification *********************************************/
+    .iconify {
+        display: none;
+    }
+    /***********************************  menu burger *********************************************/
+    .navbar__burger {
+        display: none;
+    }
+    /***********************************  liens menu *********************************************/
+    .navbar__links {
+        left: 0;
+        flex-direction: row;
+        justify-content: center;
+        background-color: var(--color-one);
+        margin-top: 3rem;
+    }
+
+    .navbar__links li {
+        color: var(--color-two);
+        text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
+        padding-left: 3rem;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .navbar__links li :visited {
+        color: var(--color-two);
+        text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
+    }
+    /***********************************  main *********************************************/
+    main {
+        margin-top: 16rem;
+    }
+    /***********************************  about *********************************************/
+    .about__leila {
+        display: flex;
+        align-items: center;
+    }
+    /***********************************  services *********************************************/
+
+    .services__container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .services__container div {
+        width: 40%;
+    }
+
+    /***********************************  offres *********************************************/
+
+    .offres__container {
+        display: flex;
+    }
+
+    /*************************************** Section Travailler avec moi *****************************/
+
+    .etape p {
+        text-align: left;
+    }
+
+    .etape__une {
+        padding-left: 5rem;
+    }
+
+    .etape__deux {
+        padding-left: 15rem;
+    }
+
+    .etape__deux h3 {
+        padding-left: 1rem;
+    }
+
+    .etape__trois {
+        padding-left: 5rem;
     }
 }

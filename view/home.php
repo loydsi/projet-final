@@ -8,12 +8,14 @@
 
 <section id="about">
     <h2>Hello everyone</h2>
-    <figure>
-        <img src="../public/img/photo-about.jpg" alt="photo de leila">
-    </figure>
+    <div class="about__leila">
+        <figure>
+            <img src="../public/img/photo-about.jpg" alt="photo de leila">
+        </figure>
 
-    <p class="about__leila__bold">Je suis Leïla, Assistante virtuelle indépendante.
-    J'habite Bordeaux, en Nouvelles-Aquitaine.</p>
+        <p class="about__leila__bold">Je suis Leïla, Assistante virtuelle indépendante.
+        J'habite Bordeaux, en Nouvelles-Aquitaine.</p>
+    </div>
 
     <p>Après plus de 6 ans d'expériences en tant qu'assistante commerciale et administrative, j'ai
     décidé de me lancer dans l'aventure entrepreneuriale.</p>
@@ -92,10 +94,10 @@
 
 <section id="offres">
     <h2>Mes offres</h2>
-    
+    <div class="offres__container">
     <div class="offres__confort">
         <figure>
-            <img src="../public/img/confort.jpg" alt="phoyo offre confort">
+            <img src="../public/img/offre1.jpg" alt="photo offre confort">
         </figure>
         <h3>Offre confort</h3>
         <p>A partir de 8 heures par mois</p>
@@ -104,7 +106,7 @@
 
     <div class="offres__serenite">
         <figure>
-            <img src="../public/img/confort.jpg" alt="phoyo offre serenite">
+            <img src="../public/img/offres1.jpg" alt="phoyo offre serenite">
         </figure>
         <h3>Offre Sérénité</h3>
         <p>A partir de 20 heures par mois</p>
@@ -118,6 +120,7 @@
         <h3>Offre Epanouissement</h3>
         <p>A partir de 30 heures par mois</p>
         <p class="offre__epanouissement__prix">1150 €</p>
+    </div>
     </div>
 
     <p class="offres__bold">Un devis vous sera proposé, si le besoin est supérieur à 30 Heures</p>

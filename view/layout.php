@@ -41,7 +41,7 @@
                     <a href="index.php?route=home#services" class="navbar-links">Mes services</a>
                 </li>
                 <li>
-                    <a href="index.php?route=home#contact" class="navbar-links">Contact</a>
+                    <a href="index.php?route=home#footer" class="navbar-links">Contact</a>
                 </li>
                 <li>
                     <a href="index.php?route=user" class="navbar-links">Mon Compte</a>
@@ -58,29 +58,40 @@
         <?php include_once $view; ?>
     </main>
 
-    <footer id="contact">
+    <footer id="footer">
         <!-- Bloc qui contient le mail et le telephone -->
-        <div class="contact">
-            <div class="contact__mail">
-                <img class="contact__mail__logo" src="../public/img/mail.png" alt="logo mail">
-                <p class="contact__mail__text">leyilas.agency@gmail.com</p>
-            </div>
-            <div class="contact__tel">
-                <img class="contact__tel__logo" src="../public/img/telephone.png" alt="logo mail">
-                <p class="contact__tel__logo">07 65 68 89 12</p>
-            </div>
+        <div class="footer__liens">
+
+            <a href="index.php"><h3>Leyla's Agency</h3></a>
+
+            <ul>
+                <li>
+                    <a href="index.php?route=home#about">A propos</a>
+                </li>  
+                <li>
+                    <a href="index.php?route=home#offres">Mes offres</a>
+                </li>  
+                <li>
+                    <a href="index.php?route=home#services">Mes services</a>
+                </li>
+                <li>
+                    <a href="index.php?route=home#contact">Contact</a>
+                </li>
+            </ul>
         </div>
 
         <!-- Bloc qui contient l'accees aux reseaux sociaux -->
-        <div class="reseaux">
-            <div class="reseaux__insta">
-                <img class="reseaux__insta__logo" src="../public/img/instagram.png" alt="logo instagram">
-                <a class="reseaux__insta__text" href="#">Instagram</a>
-            </div>
-            <div class="reseaux__facebook">
-                <img class="reseaux__facebook__logo" src="../public/img/facebook.png" alt="logo facebook">
-                <a class="reseaux__facebook__text" href="https://www.facebook.com/leyilas.agency/">Facebook</a>
-            </div>
+        <div class="footer__contact">
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <p><strong>Mail :</strong> leyilas.agency@gmail.com</p>
+                <p><strong>Tel :</strong> 07 65 68 89 12</p>
+        </div>
+
+        <!-- bloc qui contient les mentions legales -->
+        <div class="footer__mention">
+            <p><a href="#">Mentions legales</a></p>
+            <p>Simon Loyd © 2022</p>
         </div>
     </footer>
     <script type="text/javascript" src="../public/js/script.js"></script>
