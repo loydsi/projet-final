@@ -1,6 +1,13 @@
 <?php
+/** le routeur est en charge d'analyser l'url afin de savoir quelle controleur appele et quelle methode de ce controleurdoit etre utiliser */
 
-spl_autoload_register(function( $class ){
+
+/*require '../vendor/autoload.php';
+
+echo($_GET('url'));*/
+
+
+/*spl_autoload_register(function( $class ){
 	require_once lcfirst( str_replace( '\\', '/', $class ) ) . '.php';
 });
 
@@ -87,7 +94,11 @@ else
 {
 	header('Location: index.php?route=home');
 	exit();
-}
+}*/
+
+
+
+
 
 /*if( array_key_exists( 'route', $_GET ) )
 {

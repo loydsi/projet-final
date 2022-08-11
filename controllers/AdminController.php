@@ -41,6 +41,7 @@ class AdminController
 
     public function showAdminAddCompany()
     {
+        
         $view = 'adminAddCompany.php';
 		include_once 'view/layout.php';
     }

@@ -32,6 +32,7 @@
 
             <ul class="navbar__links">
                 <li>
+                    <!-- A voir -->
                     <a href="index.php?route=home#about" class="navbar-links">A propos</a>
                 </li>  
                 <li>
@@ -55,7 +56,7 @@
     
     <main>
         <!-- Contenu du site qui change suivant ce que l'on fait -->
-        <?php include_once $view; ?>
+        <?= $content ?>
     </main>
 
     <footer id="footer">

@@ -1,7 +1,7 @@
 <?php
 namespace Controllers;
 
-class FrontControllers 
+class FrontControllers
 {
     public function showHome()
     {

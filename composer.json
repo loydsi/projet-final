@@ -1,0 +1,16 @@
+{
+    "name": "loydsimon/projet_final",
+    "authors": [
+        {
+            "name": "Loyd SIMON",
+            "email": "loyd33@hotmail.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Router\\": "routes/",
+            "App\\": "app/"
+        }
+    },
+    "require": {}
+}

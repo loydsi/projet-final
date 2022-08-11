@@ -1,16 +1,16 @@
 <section class="inscription">
 
-<form action="index.php?route=user" name="inscription">
+<form action="index.php?route=user" method="POST" name="inscription">
     <h2>S'inscrire</h2>
-    <div> <!-- article --> 
+    <!--<div> 
         <label for="namecompany">Nom de L'entreprise</label>
         <input type="text" name="namecompany" id="namecompany" placeholder="Nom de L'entreprise">
-    </div>
+    </div>-->
     <div>
         <label for="email">Email</label>
         <input type="email" name="email" id="email" placeholder="email">
     </div>
-    <div>
+    <!--<div>
         <label for="telephone">Telephone</label>
         <input type="tel" name="telephone" id="telephone" placeholder="Telephone">
     </div>
@@ -29,7 +29,7 @@
     <div>
         <label for="ville">Villes</label>
         <input type="text" name="ville" id="ville" placeholder="Villes">
-    </div>
+    </div>-->
     <div>
         <label for="password">Mot de passe</label>
         <input type="password" name="password" id="password" placeholder="Mot de passe">
