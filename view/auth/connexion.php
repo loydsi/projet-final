@@ -14,6 +14,6 @@
     <button type="submit">Connexion</button>
 </form>
 
-<a href="index.php?route=inscription">Inscription</a>
+<a href="/inscription">Inscription</a>
 </section>
 

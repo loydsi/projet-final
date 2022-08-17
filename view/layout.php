@@ -18,11 +18,11 @@
         <nav class="navbar">
             
             <div class="navbar__authentication">
-                <a href="index.php?route=connexion"><span class="iconify" data-icon="bxs:user"></span></a>
+                <a href="/connexion"><span class="iconify" data-icon="bxs:user"></span></a>
             </div>
             
             <div class="navbar__logo">
-                <a href="index.php" class="navbar__logo"><h1>Leyla's Agency</h1></a>
+                <a href="/" class="navbar__logo"><h1>Leyla's Agency</h1></a>
             </div>
             
 
@@ -33,22 +33,22 @@
             <ul class="navbar__links">
                 <li>
                     <!-- A voir -->
-                    <a href="index.php?route=home#about" class="navbar-links">A propos</a>
+                    <a href="/#about" class="navbar-links">A propos</a>
                 </li>  
                 <li>
-                    <a href="index.php?route=home#offres" class="navbar-links">Mes offres</a>
+                    <a href="/#offres" class="navbar-links">Mes offres</a>
                 </li>  
                 <li>
-                    <a href="index.php?route=home#services" class="navbar-links">Mes services</a>
+                    <a href="/#services" class="navbar-links">Mes services</a>
                 </li>
                 <li>
-                    <a href="index.php?route=home#footer" class="navbar-links">Contact</a>
+                    <a href="/#footer" class="navbar-links">Contact</a>
                 </li>
                 <li>
-                    <a href="index.php?route=user" class="navbar-links">Mon Compte</a>
+                    <a href="/user" class="navbar-links">Mon Compte</a>
                 </li>
                 <li>
-                    <a href="index.php?route=admin" class="navbar-links">Le compte</a>
+                    <a href="/admin" class="navbar-links">Le compte</a>
                 </li>
             </ul>
         </nav>
@@ -63,20 +63,20 @@
         <!-- Bloc qui contient le mail et le telephone -->
         <div class="footer__liens">
 
-            <a href="index.php"><h3>Leyla's Agency</h3></a>
+            <a href="/"><h3>Leyla's Agency</h3></a>
 
             <ul>
                 <li>
-                    <a href="index.php?route=home#about">A propos</a>
+                    <a href="/#about">A propos</a>
                 </li>  
                 <li>
-                    <a href="index.php?route=home#offres">Mes offres</a>
+                    <a href="/#offres">Mes offres</a>
                 </li>  
                 <li>
-                    <a href="index.php?route=home#services">Mes services</a>
+                    <a href="/#services">Mes services</a>
                 </li>
                 <li>
-                    <a href="index.php?route=home#contact">Contact</a>
+                    <a href="/#contact">Contact</a>
                 </li>
             </ul>
         </div>

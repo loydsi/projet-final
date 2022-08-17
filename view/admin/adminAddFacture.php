@@ -1,6 +1,6 @@
 <section class="admin__add__facture">
 
-    <a href="index.php?route=facture" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
+    <a href="/adminFacture" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
 
 
     <h2>Ajouter une facture</h2>

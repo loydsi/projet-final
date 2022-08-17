@@ -1,6 +1,6 @@
 <section class="admin__facture">
 
-    <a href="index.php?route=admin" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
+    <a href="/admin" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
     <h2>Factures</h2>
     <table class="admin__facture__detail">
         <tr>
@@ -9,5 +9,5 @@
             <td>Supprimer</td>
         </tr>
     </table>
-    <a href="index.php?route=addfacture" class="admin__facture__add">Ajouter une facture</a>
+    <a href="/adminAddFacture" class="admin__facture__add">Ajouter une facture</a>
 </section>

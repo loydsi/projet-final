@@ -25,6 +25,6 @@ class Router {
             }
         }
 
-        return header ('HTTP/1.0 404 not Found'); /* A voir */
+        //return header('HTTP/1.0 404 not Found'); /* A voir */
     }
 }

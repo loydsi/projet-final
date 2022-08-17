@@ -1,6 +1,6 @@
 <section class="admin__add__devis">
 
-    <a href="index.php?route=devis" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
+    <a href="/adminDevis" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
 
 
     <h2>Ajouter un devis</h2>

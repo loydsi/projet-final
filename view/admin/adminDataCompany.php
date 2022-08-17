@@ -1,9 +1,10 @@
-<section class="user__data">
+<section class="admin__data__company">
 
-    <a href="index.php?route=user" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
-    <h2>Mes Données</h2>
+    <a href="/admin" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
 
-    <table class="user__data__company">
+    <h2>Nom entreprise</h2>
+
+    <table class="admin__data__company__list">
         <tr>
             <td>Nom de L'entreprise</td>
             <td>Leyila's Agency</td>
@@ -34,19 +35,19 @@
         </tr>
     </table>
 
-    <table class="user__data__facture">
+    <table class="admin__data__company__facture">
         <tr>
             <td>factures 1</td>
             <td>telecharger</td>
         </tr>
     </table>
 
-    <table class="user__data__devis">
+    <table class="admin__data__company__devis">
         <tr>
             <td>Devis 1</td>
             <td>telecharger</td>
         </tr>
     </table>
-
-    <a href="index.php?route=userupdate" class="user__data__update">Modifier profil</a>
+    <a href="#" class="admin__data__company__button">Supprimer profil</a>
+    <a href="/adminUpdateCompany" class="admin__data__company__button">Modifier profil</a>
 </section>

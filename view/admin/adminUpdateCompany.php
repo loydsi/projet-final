@@ -1,5 +1,5 @@
 <section class="admin__update__company">
-    <a href="index.php?route=companydata" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
+    <a href="/adminDataCompany" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
     <h2>Modifier nom entreprise</h2>
 
 <form action="" name="">

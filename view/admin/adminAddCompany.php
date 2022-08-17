@@ -1,18 +1,18 @@
 <section class="admin__add__company">
-    <a href="index.php?route=company" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
+    <a href="/adminCompany" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
     <h2>Ajouter une entreprise</h2>
 
 <form action="" name="">
     
-    <div>
+    <!--<div>
         <label for="namecompany">Nom de L'entreprise</label>
         <input type="text" name="namecompany" id="namecompany" placeholder="Nom de L'entreprise">
-    </div>
+    </div>-->
     <div>
         <label for="email">Email</label>
         <input type="email" name="email" id="email" placeholder="email">
     </div>
-    <div>
+    <!--<div>
         <label for="telephone">Telephone</label>
         <input type="tel" name="telephone" id="telephone" placeholder="Telephone">
     </div>
@@ -31,7 +31,7 @@
     <div>
         <label for="ville">Villes</label>
         <input type="text" name="ville" id="ville" placeholder="Villes">
-    </div>
+    </div>-->
     <div>
         <label for="password">Mot de passe</label>
         <input type="password" name="password" id="password" placeholder="Mot de passe">

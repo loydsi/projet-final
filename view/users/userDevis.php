@@ -1,5 +1,5 @@
 <section class="user__devis">
-    <a href="index.php?route=user" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
+    <a href="/user" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
 
 
     <h2>Devis</h2>
