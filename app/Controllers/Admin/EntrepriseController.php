@@ -27,6 +27,14 @@ class EntrepriseController extends Controller {
     public function createCompany()
     {
         $this->isAdmin();
+        
+
+        foreach ($_POST as $key => $value) {
+            htmlentities($value);
+        }
+
+        var_dump($_POST);
+        die();
 
         $company = new Company($this->getDB());
         $companys["ville"] = array_pop($_POST);

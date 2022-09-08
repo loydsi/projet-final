@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Auth;
+use App\Validation\Validator;
 
 
 class AuthController extends Controller{
@@ -14,6 +15,18 @@ class AuthController extends Controller{
 
     public function loginCompany() 
     {
+        $validator = new Validator($_POST);
+        $errors = $validator->validate([
+            'mail' => ['required', 'min8'],
+            'password' => ['required']
+        ]);
+
+        if ($errors) {
+            $_SESSION['errors'][] = $errors;
+            header('Location: /login');
+            exit;
+        }
+        
         $auth = (new Auth($this->getDB()))->getByMail($_POST['mail']);
 
         if (password_verify($_POST['password'], $auth->password)) {
