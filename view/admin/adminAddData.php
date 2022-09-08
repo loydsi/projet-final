@@ -1,16 +1,12 @@
-<section class="admin__update__company">
-    <a href="/adminDataCompany" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
-    <h2>Modifier nom entreprise</h2>
+<section class="admin__add__company">
+    <a href="/adminCompany" class="arrow"><i class="fa-solid fa-arrow-left"></i></a>
+    <h2>Ajouter une entreprise</h2>
 
-<form action="" name="">
+<form action="/adminAddData" method="POST">
     
     <div>
         <label for="namecompany">Nom de L'entreprise</label>
         <input type="text" name="namecompany" id="namecompany" placeholder="Nom de L'entreprise">
-    </div>
-    <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="email">
     </div>
     <div>
         <label for="telephone">Telephone</label>
@@ -32,11 +28,6 @@
         <label for="ville">Villes</label>
         <input type="text" name="ville" id="ville" placeholder="Villes">
     </div>
-    <div>
-        <label for="password">Mot de passe</label>
-        <input type="password" name="password" id="password" placeholder="Mot de passe">
-    </div>
-    <button type="submit">Modifier</button>
+    <button type="submit"><a href="">Ajouter</a></button>
 </form>
 </section>
-

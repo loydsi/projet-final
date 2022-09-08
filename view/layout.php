@@ -18,7 +18,7 @@
         <nav class="navbar">
             
             <div class="navbar__authentication">
-                <a href="/connexion"><span class="iconify" data-icon="bxs:user"></span></a>
+                <a href="/login"><span class="iconify" data-icon="bxs:user"></span></a>
             </div>
             
             <div class="navbar__logo">
@@ -44,11 +44,13 @@
                 <li>
                     <a href="/#footer" class="navbar-links">Contact</a>
                 </li>
+                <?php if (isset($_SESSION['roles'])): ?>
                 <li>
-                    <a href="/user" class="navbar-links">Mon Compte</a>
+                    <a href="/logout" class="navbar-links">Se deconnecter</a>
                 </li>
+                <?php endif ?>
                 <li>
-                    <a href="/admin" class="navbar-links">Le compte</a>
+                    <a href="/login" class="navbar-links">Connexion</a>
                 </li>
             </ul>
         </nav>

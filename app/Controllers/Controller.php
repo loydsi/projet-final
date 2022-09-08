@@ -4,16 +4,19 @@ namespace App\Controllers;
 
 use Database\DBConnection;
 
-class Controller {
+abstract class Controller {
 
     protected $db;
 
     public function __construct(DBConnection $db)
     {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         $this->db = $db;
     }
 
-    public function view(string $path, array $params = null)
+    protected function view(string $path, array $params = null)
     {
         ob_start();
         $path = str_replace('.', DIRECTORY_SEPARATOR, $path);
@@ -21,5 +24,19 @@ class Controller {
 
         $content = ob_get_clean();
         require VIEW . 'layout.php';
+    }
+
+    protected function getDB()
+    {
+        return $this->db;
+    }
+
+    protected function isAdmin()
+    {
+        if (isset($_SESSION['roles']) && $_SESSION['roles'] === 1) {
+            return true;
+        } else {
+            return header('Location: /login');
+        }
     }
 }

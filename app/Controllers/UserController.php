@@ -18,12 +18,16 @@ class UserController extends Controller{
 
     public function showFacture()
     {
-        return $this->view('users.userFacture');
+        $stmt = $this->db->getPDO()->query('SELECT * FROM users JOIN facture ON users.id = facture.users_id');
+        $facture = $stmt->fetchAll();
+        return $this->view('users.userFacture', compact('facture'));
     }
 
     public function showDevis()
     {
-        return $this->view('users.userDevis');
+        $stmt = $this->db->getPDO()->query('SELECT * FROM users JOIN devis ON users.id = devis.users_id');
+        $devis = $stmt->fetchAll();
+        return $this->view('users.userDevis', compact('devis'));
     }
 
     public function showUpdate()
