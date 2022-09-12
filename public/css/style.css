@@ -22,6 +22,7 @@
     --font-text1: 'Montserrat', sans-serif;
     --font-text2: 'Indie Flower', cursive;
     --font-text3: 'Life Savers', cursive;
+    --size-h1: 2.5rem;
     --size-h3: 1.8rem;
     --size-text: 1.6rem;
 }
@@ -71,7 +72,6 @@ header {
 }
 
 .navbar {
-    /*width:100%;*/
     padding:1rem;
     display:flex;
 	align-items: center;
@@ -97,7 +97,7 @@ header {
 .navbar__logo a h1{
     text-shadow: 0.1rem 0.1rem 0.2rem #56432e;
     color: var(--color-two);
-    font-size: 2.7rem;
+    font-size: var(--font-text1);
     padding: 2rem;
     text-align: center;
     font-family: var(--font-text2);
@@ -174,7 +174,7 @@ header {
 .navbar__links li a {
     color: var(--color-one);
     text-decoration: none;
-    font-size: 2rem;
+    font-size: var(--font-text2);
 }
 
 .navbar__links li::after {
@@ -202,7 +202,9 @@ header {
 /*********************************** Main **************************************************/
 
 main {
-    margin-top: 11rem;
+    padding-top: 11rem;
+    width: 80%;
+    margin: auto;
 }
 
 /******************************* section Welcome *******************************************/
@@ -698,112 +700,6 @@ footer p {
     padding: 1rem;
 }
 
-/*********************************** Footer contact **************************/
-
-/*.contact {
-    width: 17rem;
-    height: 8rem;
-    background-color: var(--color-one);
-    border-radius: 10% 10%;
-    text-align: center;
-}
-
-.contact img {
-    width: 2rem;
-    height: 2rem;
-}
-
-.contact__mail {
-    display: flex;
-    justify-content: flex-start;
-    text-align: center;
-}
-
-.contact__mail__logo {
-    padding: 1rem;
-    margin: 0;
-}
-
-.contact__mail__text {
-    padding: 1rem;
-    margin: 0;
-}
-
-.contact__tel {
-    display: flex;
-    justify-content: flex-start;
-    text-align: center;
-}
-
-.contact__tel__logo {
-    padding: 1rem;
-    margin: 0;
-}
-
-.contact__tel__text {
-    padding: 1rem;
-    margin: 0;
-}*/
-
-/*********************************** Footer reseaux **************************/
-
-/*.reseaux {
-    width: 17rem;
-    height: 8rem;
-    background-color: var(--color-one);
-    border-radius: 10% 10%;
-    text-align: center;
-}
-
-.reseaux__insta {
-    display: flex;
-    justify-content: flex-start;
-    text-align: center;
-}
-
-.reseaux__insta__logo {
-    padding: 1rem;
-    margin: 0;
-}
-
-.reseaux__insta__text {
-    padding: 1rem;
-    margin: 0;
-    text-decoration: none;
-    color: #D4D3DB;
-}
-
-.reseaux__insta__text :visited {
-    color: #D4D3DB;
-}
-
-.reseaux__facebook {
-    display: flex;
-    justify-content: flex-start;
-    text-align: center;
-}
-
-.reseaux__facebook__logo {
-    padding: 1rem;
-    margin: 0;
-}
-
-.reseaux__facebook__text {
-    padding: 1rem;
-    margin: 0;
-    text-decoration: none;
-    color: #D4D3DB;
-}
-
-.reseaux__facebook__text :visited {
-    color: #D4D3DB;
-}
-
-.reseaux img {
-    width: 2rem;
-    height: 2rem
-}*/
-
 /********************************** Arrow ******************************************/
 .arrow {
     width: 10%;
@@ -843,14 +739,6 @@ form button {
     padding: .7rem;
 }
 
-/*.arrow {
-    background-color: var(--color-one);
-    color: var(--color-two);
-    text-align: left;
-    padding: 1rem;
-    text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
-}*/
-
 /********************************** Connexion ******************************************/
 .connexion {
     width: 100%;
@@ -868,6 +756,19 @@ form button {
     text-decoration: none;
 }
 
+.connexion div {
+    position: relative;
+}
+
+.connexion div input:focus {
+    border: .2rem solid --color-two;
+}
+
+.connexion div span {
+    position: absolute;
+    color: red;
+    font-size: var(--font-text2);
+}
 /********************************** Inscription ******************************************/
 .inscription {
     width: 100%;
@@ -1035,6 +936,7 @@ form button {
 /********************************** Admin ******************************************/
 .admin {
     width: 100%;
+    padding: 2rem;
 }
 
 .admin__profil {
@@ -1063,6 +965,8 @@ form button {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 2rem;
+
 }
 
 .company h2 {
@@ -1115,6 +1019,7 @@ form {
     text-align: center;
     display: flex;
     flex-direction: column;
+    padding: 2rem;
 }
 
 .admin__data__company h2 {
@@ -1164,6 +1069,7 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 2rem;
 }
 
 .admin__update__company label {
@@ -1188,6 +1094,7 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 2rem;
 }
 
 .admin__add__company label {
@@ -1213,6 +1120,7 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 2rem;
 }
 .admin__facture__add {
     background-color: var(--color-two);
@@ -1243,6 +1151,7 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 2rem;
 }
 
 .admin__add__facture h2{
@@ -1262,6 +1171,8 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 2rem;
+
 }
 .admin__devis__add {
     background-color: var(--color-two);
@@ -1292,6 +1203,8 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 2rem;
+
 }
 
 .admin__add__devis h2{
@@ -1764,7 +1677,7 @@ form {
     }
     /***********************************  main *********************************************/
     main {
-        margin-top: 16rem;
+        padding-top: 15rem;
     }
     /***********************************  about *********************************************/
     .about__leila {

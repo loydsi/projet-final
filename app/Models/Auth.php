@@ -10,6 +10,9 @@ class Auth extends Model {
 
     public function getByMail(string $mail): Auth
     {
+        
         return $this->query("SELECT * FROM $this->table WHERE mail = ?", [$mail], true);
+        
+        
     }
 }

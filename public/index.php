@@ -21,16 +21,16 @@ $router = new Router($_GET['url']);
 $router->get('/', 'App\Controllers\SiteController@index');
 
 
-$router->get('/user', 'App\Controllers\UserController@index');
+/*$router->get('/user', 'App\Controllers\UserController@index');
 $router->get('/userDataCompany', 'App\Controllers\UserController@showData'); 
 $router->get('/userFacture', 'App\Controllers\UserController@showFacture'); 
 $router->get('/userDevis', 'App\Controllers\UserController@showDevis'); 
-$router->get('/userUpdate', 'App\Controllers\UserController@showUpdate'); 
+$router->get('/userUpdate', 'App\Controllers\UserController@showUpdate'); */
 
 $router->get('/login', 'App\Controllers\AuthController@login'); 
 $router->post('/login', 'App\Controllers\AuthController@loginCompany'); 
 $router->get('/logout', 'App\Controllers\AuthController@logout'); 
-
+$router->get('/compte', 'App\Controllers\AuthController@compte'); 
 
 $router->get('/admin', 'App\Controllers\Admin\AdminController@index');
 
@@ -57,8 +57,7 @@ $router->get('/adminDevis', 'App\Controllers\Admin\AdminController@showDevis');
 $router->get('/adminAddDevis', 'App\Controllers\Admin\AdminController@showAddDevis');
 $router->get('/adminAddData', 'App\Controllers\Admin\AdminController@showAddData');
 
-$router->get('/connexion', 'App\Controllers\AuthController@index');
-$router->get('/inscription', 'App\Controllers\AuthController@inscription');
+
 
 try {
     $router->run();

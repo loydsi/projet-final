@@ -44,14 +44,17 @@
                 <li>
                     <a href="/#footer" class="navbar-links">Contact</a>
                 </li>
-                <?php if (isset($_SESSION['roles'])): ?>
                 <li>
-                    <a href="/logout" class="navbar-links">Se deconnecter</a>
+                    <a href="/compte" class="navbar-links">mon compte</a>
                 </li>
-                <?php endif ?>
                 <li>
                     <a href="/login" class="navbar-links">Connexion</a>
                 </li>
+                <?php if (isset($_SESSION['roles'])): ?>
+                <li>
+                    <a href="/logout" class="navbar-links"><i class="fa-solid fa-xmark"></i></a>
+                </li>
+                <?php endif ?>
             </ul>
         </nav>
     </header>

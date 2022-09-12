@@ -6,7 +6,7 @@ use App\Models\Auth;
 use App\Validation\Validator;
 
 
-class AuthController extends Controller{
+class AuthController extends Controller {
 
     public function login()
     {
@@ -27,7 +27,7 @@ class AuthController extends Controller{
             exit;
         }
         
-        $auth = (new Auth($this->getDB()))->getByMail($_POST['mail']);
+        $auth = (new Auth($this->getDB()))->getByMail($_POST['mail']) ;
 
         if (password_verify($_POST['password'], $auth->password)) {
             
@@ -47,5 +47,17 @@ class AuthController extends Controller{
         session_destroy();
 
         return header('Location: /');
+    }
+
+    public function compte()
+    {
+        //$_SESSION['roles'] = (int) $auth->roles;
+        if ($_SESSION['roles'] === 1) {
+            return header('Location: /admin');
+        } else if ($_SESSION['roles'] === 2){
+            return header('Location: /user');
+        }else {
+            return header('Location: /');
+        }
     }
 }

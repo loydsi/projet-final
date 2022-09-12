@@ -19,38 +19,38 @@ class EntrepriseController extends Controller {
 
     public function create()
     {
-        $this->isAdmin();
+        
 
         return $this->view('admin.adminFormCompany');
     }
 
     public function createCompany()
     {
-        $this->isAdmin();
         
+       if (!empty($_POST['mail']) && !empty($_POST['password']) && !empty($_POST['nom_entreprise']) && !empty($_POST['telephone']) && !empty($_POST['siret']) && !empty($_POST['adresse']) && !empty($_POST['code_postal']) && !empty($_POST['ville'])) {
 
-        foreach ($_POST as $key => $value) {
-            htmlentities($value);
-        }
+            
+            $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+            
 
-        var_dump($_POST);
-        die();
+            $company = new Company($this->getDB());
+            $companys["ville"] = htmlentities(array_pop($_POST));
+            $companys["code_postal"] = htmlentities(array_pop($_POST));
+            $companys["adresse"] = htmlentities(array_pop($_POST));
+            $companys["siret"] = htmlentities(array_pop($_POST));
+            $companys["telephone"] = htmlentities(array_pop($_POST));
+            $companys["nom_entreprise"] = htmlentities(array_pop($_POST));
+            
+            $result = $company->create($_POST, $companys);
 
-        $company = new Company($this->getDB());
-        $companys["ville"] = array_pop($_POST);
-        $companys["code_postal"] = array_pop($_POST);
-        $companys["adresse"] = array_pop($_POST);
-        $companys["siret"] = array_pop($_POST);
-        $companys["telephone"] = array_pop($_POST);
-        $companys["nom_entreprise"] = array_pop($_POST);
-
-        $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-        $result = $company->create($_POST, $companys);
-
-        if($result) {
+            if($result) {
+                return header('Location: /adminCompany');
+            }
+            
+        } else {
             return header('Location: /adminCompany');
         }
+
     }
 
     public function edit(int $id)
@@ -64,12 +64,29 @@ class EntrepriseController extends Controller {
     {
         $this->isAdmin();
 
-        $company = new Company($this->getDB());
-        $result = $company->update($id, $_POST);
+        if (!empty($_POST['mail']) && !empty($_POST['password']) && !empty($_POST['nom_entreprise']) && !empty($_POST['telephone']) && !empty($_POST['siret']) && !empty($_POST['adresse']) && !empty($_POST['code_postal']) && !empty($_POST['ville'])) {
 
-        if($result) {
+            $company = new Company($this->getDB());
+            $companys['mail'] = htmlentities($_POST['mail']); 
+            $companys['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT); 
+            $companys['nom_entreprise'] = htmlentities($_POST['nom_entreprise']); 
+            $companys['telephone'] = htmlentities($_POST['telephone']); 
+            $companys['siret'] = htmlentities($_POST['siret']); 
+            $companys['adresse'] = htmlentities($_POST['adresse']); 
+            $companys['code_postal'] = htmlentities($_POST['code_postal']); 
+            $companys['ville'] = htmlentities($_POST['ville']); 
+        
+            $result = $company->update($id, $companys);
+
+            if($result) {
+                return header('Location: /adminCompany');
+            }  
+
+        } else {
             return header('Location: /adminCompany');
         }
+        
+        
     }
 
     public function destroy(int $id)
