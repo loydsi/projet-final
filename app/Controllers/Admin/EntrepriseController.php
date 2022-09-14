@@ -44,11 +44,11 @@ class EntrepriseController extends Controller {
             $result = $company->create($_POST, $companys);
 
             if($result) {
-                return header('Location: /adminCompany');
+                return header('Location: /');
             }
             
         } else {
-            return header('Location: /adminCompany');
+            return header('Location: /adminFormCompany/create');
         }
 
     }

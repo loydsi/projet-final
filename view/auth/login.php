@@ -20,18 +20,18 @@
     <h2>Se Connecter</h2>
     <div>
         <label for="email"></label>
-        <input type="email" name="mail" id="mail"  placeholder="email" onkeyup="validateMail()">
+        <input type="email" name="mail" id="mail" required placeholder="email"><br>
         <span id="mail-error"></span>
     </div>
     <div>
         <label for="password"></label>
-        <input type="password" name="password" id="password" placeholder="Mot de passe">
-        <span id="password-error"></span>
+        <input type="password" name="password" id="password" required placeholder="Mot de passe">
+        <!--<span id="password-error"></span>-->
     </div>
     <button type="submit">Connexion</button>
 </form>
 
 <a href="/adminFormCompany/create">Inscription</a>
-<!--required pattern="^[A-Za-z]+@{1}[A-Za-z]+\.{1}[A-Za-z]{2,}$"-->
+<!--required pattern="^[A-Za-z]+@{1}[A-Za-z]+\.{1}[A-Za-z]{2,}$"    onkeyup="validateMail()-->
 </section>
 

@@ -47,8 +47,11 @@ $router->post('/adminFormCompany/:id', 'App\Controllers\Admin\EntrepriseControll
 $router->get('/admin/enteprises/create', 'App\Controllers\EntrepriseController@AddEntreprise');// Afficher le formulaire
 $router->post('/admin/enteprises/create', 'App\Controllers\EntrepriseController@createPost');// Insère la data*/
 
-$router->get('/adminAddCompany', 'App\Controllers\Admin\AdminController@showAddCompany');
+//$router->get('/adminAddCompany', 'App\Controllers\Admin\AdminController@showAddCompany');
 //$router->post('/adminAddCompanyPost', 'App\Controllers\Admin\AdminController@AddCompany');
+
+
+$router->get('/user', 'App\Controllers\UserController@index');
 
 
 $router->get('/adminFacture', 'App\Controllers\Admin\AdminController@showFacture');
@@ -60,7 +63,7 @@ $router->get('/adminAddData', 'App\Controllers\Admin\AdminController@showAddData
 
 
 try {
-    $router->run();
+    $router->run(); // verifie sur nos differentes route si quelque chose matche
 } catch (NotFoundException $e) {
     return $e->error404();
 }

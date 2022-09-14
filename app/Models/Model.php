@@ -104,6 +104,7 @@ abstract class Model {
 
         if($method === 'query') {
             return $stmt->$fetch();
+            
         } else {
             $stmt->execute($param);
             return $stmt->$fetch();

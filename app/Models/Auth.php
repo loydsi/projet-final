@@ -12,7 +12,6 @@ class Auth extends Model {
     {
         
         return $this->query("SELECT * FROM $this->table WHERE mail = ?", [$mail], true);
-        
-        
+
     }
 }

@@ -16,11 +16,11 @@ class AdminController extends Controller{
 
     
 
-    public function showAddCompany() 
+    /*public function showAddCompany() 
     {
         $this->isAdmin();
 
-        return $this->view('admin.adminAddCompany'); /*compact('page'));  A voir */
+        return $this->view('admin.adminAddCompany'); 
     }
 
     public function AddCompany() 
@@ -33,7 +33,7 @@ class AdminController extends Controller{
     {
         $this->isAdmin();
 
-        return $this->view('admin.adminAddData'); /*compact('page'));  A voir */
+        return $this->view('admin.adminAddData'); 
     }
 
     
@@ -42,13 +42,13 @@ class AdminController extends Controller{
     {
         $this->isAdmin();
 
-        return $this->view('admin.adminUpdateCompany'); /*compact('page'));  A voir */
+        return $this->view('admin.adminUpdateCompany'); 
     }
 
     public function showFacture() 
     {
         
-        return $this->view('admin.adminFacture'); /*compact('page'));  A voir */
+        return $this->view('admin.adminFacture'); 
     }
 
     public function showAddFacture() 
@@ -96,16 +96,16 @@ class AdminController extends Controller{
                 echo ('erreur');
             }
         }
-        return $this->view('admin.adminAddFacture'); /*compact('page'));  A voir */
+        return $this->view('admin.adminAddFacture'); 
     }
 
     public function showDevis() 
     {
-        return $this->view('admin.adminDevis'); /*compact('page'));  A voir */
+        return $this->view('admin.adminDevis'); 
     }
 
     public function showAddDevis() 
     {
-        return $this->view('admin.adminAddDevis'); /*compact('page'));  A voir */
-    }
+        return $this->view('admin.adminAddDevis'); 
+    }*/
 }
