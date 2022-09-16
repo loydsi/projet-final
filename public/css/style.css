@@ -756,18 +756,14 @@ form button {
     text-decoration: none;
 }
 
-.connexion div {
-    position: relative;
-}
-
 .connexion div input:focus {
     border: .2rem solid --color-two;
 }
 
 .connexion div span {
-    position: absolute;
-    color: red;
+    font-family: var(--font-text3);
     font-size: var(--font-text2);
+    font-weight: bold;
 }
 /********************************** Inscription ******************************************/
 .inscription {
@@ -786,6 +782,12 @@ form button {
 
 .inscription div {
     padding: 1rem;
+}
+
+.inscription div span {
+    font-family: var(--font-text3);
+    font-size: var(--font-text2);
+    font-weight: bold;
 }
 
 /********************************** User ******************************************/

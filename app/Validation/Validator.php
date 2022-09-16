@@ -24,6 +24,7 @@ class Validator {
                         case substr($rule, 0, 8) === 'min':
                             $this->min($name, $this->data[$name], $rule);
                             break;
+                        
                         default:
                             break;
                     }
@@ -52,6 +53,8 @@ class Validator {
             $this->errors[$name][] = "{$name} doit comprendre un minimum de {$limit} caractères.";
         }
     }
+
+    
 
     private function getErrors(): ?array
     {

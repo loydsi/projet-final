@@ -48,6 +48,8 @@ abstract class Model {
             $i++;
         }
 
+       
+
         return $this->query("INSERT INTO {$this->tabledeux} ($firstParenthesis)
         VALUES ($secondParenthesis)", $data);
     }
@@ -101,8 +103,10 @@ abstract class Model {
 
         $stmt = $this->db->getPDO()->$method($sql);
         $stmt->setFetchMode(PDO::FETCH_CLASS, get_class($this), [$this->db]);
+        
 
         if($method === 'query') {
+            
             return $stmt->$fetch();
             
         } else {

@@ -13,62 +13,176 @@ menu.addEventListener("click", function () {
   burgerButton.classList.toggle("active");
 });
 
-// verification formulaire
+// verification formulaire connexion
 
-const myForm = document.getElementById("myForm");
+let form = document.querySelector("#myForm");
 
-myForm.addEventListener("submit", function (e) {
-  const myMail = document.getElementById("mail");
-  const myPassword = document.getElementById("password");
-  const myNameCompany = document.getElementById("nameCompany");
-  const myTelephone = document.getElementById("telephone");
-  const mySiret = document.getElementById("siret");
-  const myAdresse = document.getElementById("adresse");
-  const myCodePostal = document.getElementById("codePostal");
-  const myVille = document.getElementById("ville");
-
-  if (
-    myMail.value.trim() == "" ||
-    myPassword.value.trim() == "" ||
-    myNameCompany.value.trim() == "" ||
-    myTelephone.value.trim() == "" ||
-    mySiret.value.trim() == "" ||
-    myAdresse.value.trim() == "" ||
-    myCodePostal.value.trim() == "" ||
-    myVille.value.trim() == ""
-  ) {
-    let errorMail = document.getElementById("errorMail");
-    let errorPassword = document.getElementById("errorPassword");
-    let errorName = document.getElementById("errorName");
-    let errorTel = document.getElementById("errorTel");
-    let errorSiret = document.getElementById("errorSiret");
-    let errorAdresse = document.getElementById("errorAdresse");
-    let errorCodePostal = document.getElementById("errorCodePostal");
-    let errorVille = document.getElementById("errorVille");
-
-    errorMail.innerHTML = "Le champs est requis";
-    errorMail.style.color = "red";
-
-    errorPassword.innerHTML = "Le champs est requis";
-    errorPassword.style.color = "red";
-
-    errorName.innerHTML = "Le champs est requis";
-    errorName.style.color = "red";
-
-    errorTel.innerHTML = "Le champs est requis";
-    errorTel.style.color = "red";
-
-    errorSiret.innerHTML = "Le champs est requis";
-    errorSiret.style.color = "red";
-
-    errorAdresse.innerHTML = "Le champs est requis";
-    errorAdresse.style.color = "red";
-
-    errorCodePostal.innerHTML = "Le champs est requis";
-    errorCodePostal.style.color = "red";
-
-    errorVille.innerHTML = "Le champs est requis";
-    errorVille.style.color = "red";
-    e.preventDefault();
-  }
+form.mail.addEventListener("keyup", function () {
+  validMail(this);
 });
+
+form.password.addEventListener("keyup", function () {
+  validPassword(this);
+});
+
+form.nom_entreprise.addEventListener("keyup", function () {
+  validName(this);
+});
+
+form.telephone.addEventListener("keyup", function () {
+  validTel(this);
+});
+
+form.siret.addEventListener("keyup", function () {
+  validSiret(this);
+});
+
+form.adresse.addEventListener("keyup", function () {
+  validAdresse(this);
+});
+
+form.code_postal.addEventListener("keyup", function () {
+  validCode(this);
+});
+
+form.ville.addEventListener("keyup", function () {
+  validVille(this);
+});
+// Vérification du mail
+const validMail = function (inputMail) {
+  let regexMail = new RegExp(
+    "^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$"
+  );
+
+  let span = document.getElementById("errorMail");
+
+  if (regexMail.test(inputMail.value)) {
+    span.innerHTML = "Adresse valide";
+    span.style.color = "green";
+  } else {
+    span.innerHTML = "Adresse invalide";
+    span.style.color = "red";
+  }
+};
+
+// Vérification du mot de passe
+
+const validPassword = function (inputPassword) {
+  let msg;
+  let valid = false;
+  if (inputPassword.value.length < 5) {
+    msg = "Le mot de passe doit contenir au moins 5 caractères";
+  } else if (!/[A-Z]/.test(inputPassword.value)) {
+    msg = "Le mot de passe doit contenir au moins 1 majuscule";
+  } else if (!/[a-z]/.test(inputPassword.value)) {
+    msg = "Le mot de passe doit contenir au moins 1 miniscule";
+  } else if (!/[0-9]/.test(inputPassword.value)) {
+    msg = "Le mot de passe doit contenir au moins 1 chiffre";
+  } else {
+    msg = "Mot de passe valide";
+    valid = true;
+  }
+  let span = document.getElementById("errorPassword");
+
+  if (valid) {
+    span.innerHTML = "Mot de passe valide";
+    span.style.color = "green";
+  } else {
+    span.innerHTML = msg;
+    span.style.color = "red";
+  }
+};
+
+// verification nom entreprise
+
+const validName = function (inputName) {
+  let span = document.getElementById("errorName");
+
+  if (inputName.value == "") {
+    span.innerHTML = "nom de l'entreprise requis";
+    span.style.color = "red";
+  } else {
+    span.innerHTML = "Nom de l'entreprise ok";
+    span.style.color = "green";
+  }
+};
+
+// verification telephone
+
+const validTel = function (inputTel) {
+  let span = document.getElementById("errorTel");
+
+  if (inputTel.value.length < 10) {
+    span.innerHTML = "Le telephone doit contenir 10 chiffres";
+    span.style.color = "red";
+  } else {
+    span.innerHTML = "Telephone valide";
+    span.style.color = "green";
+  }
+};
+
+// verification siret
+
+const validSiret = function (inputSiret) {
+  let span = document.getElementById("errorSiret");
+
+  if (inputSiret.value.length < 14) {
+    span.innerHTML = "Le siret doit contenir 14 chiffres";
+    span.style.color = "red";
+  } else {
+    span.innerHTML = "Siret valide";
+    span.style.color = "green";
+  }
+};
+
+// Vérification du adresse
+const validAdresse = function (inputAdresse) {
+  let msg;
+  let valid = false;
+  if (!/[0-9]/.test(inputAdresse.value)) {
+    msg = "L'adresse doit contenir au moins un numéro de rue";
+  } else if (!/[a-z]/.test(inputAdresse.value)) {
+    msg = "L'adresse doit contenir le nom de la rue";
+  } else {
+    msg = "Mot de passe valide";
+    valid = true;
+  }
+  let span = document.getElementById("errorAdresse");
+
+  if (valid) {
+    span.innerHTML = "Adresse valide";
+    span.style.color = "green";
+  } else {
+    span.innerHTML = msg;
+    span.style.color = "red";
+  }
+};
+
+// Vérification du code postal
+const validCode = function (inputCode) {
+  let regexCode = new RegExp("^[0-9]{5}$");
+
+  let span = document.getElementById("errorCodePostal");
+
+  if (regexCode.test(inputCode.value)) {
+    span.innerHTML = "Code postal valide";
+    span.style.color = "green";
+  } else {
+    span.innerHTML = "Le code postal doit contenir 5 chiffres";
+    span.style.color = "red";
+  }
+};
+
+// verification ville
+
+const validVille = function (inputVille) {
+  let span = document.getElementById("errorVille");
+
+  if (inputVille.value == "") {
+    span.innerHTML = "Ville requise";
+    span.style.color = "red";
+  } else {
+    span.innerHTML = "ville ok";
+    span.style.color = "green";
+  }
+};

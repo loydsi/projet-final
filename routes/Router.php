@@ -17,6 +17,7 @@ class Router {
     public function get(string $path, string $action)
     {
         $this->routes['GET'][] = new Route($path, $action);
+        
     }
 
     public function post(string $path, string $action)

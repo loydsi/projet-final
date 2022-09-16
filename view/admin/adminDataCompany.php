@@ -15,7 +15,7 @@
         </tr>
         <tr>
             <td>Telephone</td>
-            <td><?= $params['company']->telephone ?></td>
+            <td>0<?= $params['company']->telephone ?></td>
         </tr>
         <tr>
             <td>Siret</td>
