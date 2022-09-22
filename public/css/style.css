@@ -18,13 +18,15 @@
 :root {
     --color-one: #F5F3F5;
     --color-two: #AB875F;
-    --color-three: rgb(191 170 143);
-    --font-text1: 'Montserrat', sans-serif;
-    --font-text2: 'Indie Flower', cursive;
-    --font-text3: 'Life Savers', cursive;
-    --size-h1: 2.5rem;
+    --color-three: #d3b494;
+    --fond : #f7f7f7;
+    --font-text1: 'Barlow', sans-serif; /** corps de texte **/
+    --font-text2: 'DM Serif Display', serif; /** Typo exergue + titre */
+    --size-1: 2.5rem;
+    --size-logo: 2.5rem;
     --size-h3: 1.8rem;
     --size-text: 1.6rem;
+    --size-h2: 6rem;
 }
 
 
@@ -45,6 +47,10 @@ body {
     font-size: var(--size-text);
 }
 
+h1, h2, h3 {
+    font-family: var(--font-text2);
+}
+
 img {
     width: 100%;
     height: auto;
@@ -60,8 +66,19 @@ h3 {
     padding: 0;
 }
 
+.fond {
+background-color:var(--fond);
+}
 
-
+ hr {
+    width: 100%;
+    content:'';
+    height:1px;
+    margin:2vh 0;
+    background-color: var(--color-two);
+    display: block;
+    float: left;
+}
 
 /***********************************  HEADER *********************************************/
 
@@ -69,6 +86,7 @@ header {
     width: 100%;
     position: fixed;
     top: 0;
+    background-color: var(--color-one);
 }
 
 .navbar {
@@ -94,14 +112,18 @@ header {
 }
 
 
-.navbar__logo a h1{
+.navbar__logo a p {
     text-shadow: 0.1rem 0.1rem 0.2rem #56432e;
     color: var(--color-two);
-    font-size: var(--font-text1);
+    font-size: var(--size-logo);
     padding: 2rem;
     text-align: center;
     font-family: var(--font-text2);
     margin: 0;
+}
+
+.navbar__logo a :visited {
+    color: var(--color-two);
 }
 
 /*********************************** Menu burger **************************/
@@ -167,12 +189,13 @@ header {
     transition: all .5s;
 }
 
+
 .navbar__links li {
     padding: .8rem 1.6rem;
 }
 
 .navbar__links li a {
-    color: var(--color-one);
+    color: var(--color-two);
     text-decoration: none;
     font-size: var(--font-text2);
 }
@@ -196,52 +219,59 @@ header {
     height: 100vh;
     width: 100vw;
     background-color: rgba(191,170,143,1);
+    margin: 0;
 }
 
 
-/*********************************** Main **************************************************/
+/*********************************** Container **************************************************/
 
-main {
-    padding-top: 11rem;
+.container {
     width: 80%;
     margin: auto;
+    max-width:1050px;
 }
 
-/******************************* section Welcome *******************************************/
+/******************************* section header-home *******************************************/
 
-#welcome {
+#header-home {
     width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    height:100vh;
+    background-image:url('../img/header-leylai.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 20vh 0 45vh 0;
 }
 
-#welcome h2 {
-    font-size: 5rem;
+#header-home h2 {
+    font-size: var(--size-h2);
     text-align: center;
-    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
-    padding: 1rem 0 0 0;
+    text-shadow: 0.2rem 0.2rem 0.2rem #5D5D5D;
+    color:#fff;
     font-family: var(--font-text1);
     margin: 0;
     text-transform: uppercase;
 }
 
-#welcome figure {
-    width: 0 auto;
-}
-
-#welcome figure img {
-    width:28rem;
-    height: 20rem;
-}
-
-#welcome p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-size: 1.8rem;
-    font-family: var(--font-text3);
+#header-home h1 {
+    font-size: 3rem;
+    font-family: var(--font-text2);
     padding-bottom: 1rem;
+    color:var(--color-one)!important;
+    text-shadow: 0.2rem 0.2rem 0.2rem #5D5D5D;
+
+}
+
+
+#header-home h3 {
+    font-size: 3rem;
+    font-family: var(--font-text2);
+    padding-bottom: 1rem;
+    color:var(--color-one)!important;
+    text-shadow: 0.2rem 0.2rem 0.2rem #5D5D5D;
+
 }
 
 /*********************************** section About ********************************************/
@@ -255,7 +285,7 @@ main {
 }
 
 #about h2 {
-    font-size: 5rem;
+    font-size: var(--size-h2);
     text-align: center;
     text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
     font-family: var(--font-text2);
@@ -284,179 +314,57 @@ main {
     text-shadow: 0.1rem 0.1rem 0.1rem var(--color-two);
 }
 
-/**************************************** Section Services ******************************************/
+/**************************************** Section Missions ******************************************/
 
-#services {
+#missions {
     width: 100%;
-    text-align: center;
+    padding:10vh auto;
     display: flex;
     flex-direction: column;
+    background-color: var(--color-two);
 }
 
-#services h2 {
+#missions h2 {
     text-align: center;
-    font-size: 3rem;
+    font-size: var(--size-h2);
     margin: 0;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    text-transform: uppercase;
-    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    
 }
 
-.services__container {
+.container__missions {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-/*********************************** Service Administratif **************************/
-
-.services__administratif {
-    /*width: 25rem;*/
+.container__missions__card {
     width:85%;
-    background-color: var(--color-two);
+    background-color: var(--color-one);
     margin: 0 auto;
     margin-bottom: 2rem;
-    border-radius: 20%;
+    padding: 3vh 2vw;
 }
 
-.services__administratif h3 {
-    margin: 0;
-    padding: 1rem;
+.container__missions__card h3 {
+    margin: 1rem 0;
+    display:inline-block;
     font-size: 1.8rem;
-    letter-spacing: .1rem;
-    color: var(--color-one);
-    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
+    text-transform:uppercase;
+    background:linear-gradient(180deg,transparent 0,transparent 60%,var(--color-three) 0, var(--color-three));
 }
 
-.services__administratif ul {
-    list-style-type: disc;
+.container__missions__card ul {
     margin: 0;
-    text-align: center;
-    padding: 0;
+    text-align: left;
 }
 
-.services__administratif ul li {
+.container__missions__card ul li {
     font-size: 1.6rem;
-    /*list-style-image: url(/public/img/check.svg);*/
-    list-style-type: none;
-    padding: .5rem;
-    /*text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;*/
-    color: var(--color-one);
+    color: black;
     margin-bottom: 1.6rem;
 }
-
-/*********************************** Service commerciale  **************************/
-
-.services__commerciale {
-    /*width: 25rem;*/
-    width:85%;
-    background-color: var(--color-two);
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    border-radius: 20%;
-}
-
-.services__commerciale h3 {
-    margin: 0;
-    padding: 1rem;
-    font-size: 1.8rem;
-    letter-spacing: .1rem;
-    color: var(--color-one);
-    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
-}
-
-.services__commerciale ul {
-    list-style-type: disc;
-    margin: 0;
-    text-align: center;
-    padding: 0;
-}
-
-.services__commerciale ul li {
-    font-size: 1.6rem;
-    /*list-style-image: url(/public/img/check.svg);*/
-    list-style-type: none;
-    padding: .5rem;
-    /*text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;*/
-    color: var(--color-one);
-    margin-bottom: 1.6rem;
-}
-
-/*********************************** Service reseaux **************************/
-
-.services__reseaux {
-    /*width: 25rem;*/
-    width:85%;
-    background-color: var(--color-two);
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    border-radius: 20%;
-}
-
-.services__reseaux h3 {
-    margin: 0;
-    padding: 1rem;
-    font-size: 1.8rem;
-    letter-spacing: .1rem;
-    color: var(--color-one);
-    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
-}
-
-.services__reseaux ul {
-    list-style-type: disc;
-    margin: 0;
-    text-align: center;
-    padding: 0;
-}
-
-.services__reseaux ul li {
-    font-size: 1.6rem;
-    /*list-style-image: url(/public/img/check.svg);*/
-    list-style-type: none;
-    padding: .5rem;
-    /*text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;*/
-    color: var(--color-one);
-    margin-bottom: 1.6rem;
-}
-
-/*********************************** Service autres **************************/
-
-.services__autres {
-    /*width: 25rem;*/
-    width:85%;
-    background-color: var(--color-two);
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    border-radius: 20%;
-}
-
-.services__autres h3 {
-    margin: 0;
-    padding: 1rem;
-    font-size: 1.8rem;
-    letter-spacing: .1rem;
-    color: var(--color-one);
-    text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
-}
-
-.services__autres ul {
-    list-style-type: disc;
-    margin: 0;
-    text-align: center;
-    padding: 0;
-}
-
-.services__autres ul li {
-    font-size: 1.6rem;
-    /*list-style-image: url(/public/img/check.svg);*/
-    list-style-type: none;
-    padding: .5rem;
-    /*text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;*/
-    color: var(--color-one);
-    margin-bottom: 1.6rem;
-}
-
 /**************************************** Section Offres *****************************************/
 
 #offres {
@@ -471,8 +379,7 @@ main {
     margin: 0;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    font-size: 3rem;
-    text-transform: uppercase;
+    font-size: var(--size-h2);
     text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
 }
 
@@ -481,78 +388,27 @@ main {
     height: 25rem;
 }
 
-/*********************************** Offre confort *************************************************/
-.offres__confort {
+.offres__container__card {
     margin-bottom: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.offres__confort h3 {
+.offres__container__card h3 {
     font-size: 1.8rem;
+    background:linear-gradient(180deg,transparent 0,transparent 60%,var(--color-three) 0, var(--color-three));
+
 }
 
-.offres__confort p {
+.offres__container__card p {
     font-size: 1.6rem;
     padding: .5rem;
     margin: .5rem;
 }
 
-.offre__confort__prix {
-    background-color: black;
-    color: var(--color-one);
-    width: 30%;
-    border-radius: 15%;
-    border: .1rem solid var(--color-one);
-}
-
-/*********************************** Offre Serenite *************************************************/
-.offres__serenite {
-    margin-bottom: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.offres__serenite h3 {
-    font-size: 1.8rem;
-}
-
-.offres__serenite p {
-    font-size: 1.6rem;
-    padding: .5rem;
-    margin: .5rem;
-}
-
-.offre__serenite__prix {
-    background-color: black;
-    color: var(--color-one);
-    width: 30%;
-    border-radius: 15%;
-    border: .1rem solid var(--color-one);
-}
-
-/*********************************** Offre Epanouissement *************************************************/
-.offres__epanouissement {
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.offres__epanouissement h3 {
-    font-size: 1.8rem;
-}
-
-.offres__epanouissement p {
-    font-size: 1.6rem;
-    padding: .5rem;
-    margin: .5rem;
-}
-
-.offre__epanouissement__prix {
-    background-color: black;
+.offres__container__card__prix {
+    background-color: var(--color-two);
     color: var(--color-one);
     width: 30%;
     border-radius: 15%;
@@ -582,10 +438,9 @@ main {
     margin: 0;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    font-size: 3rem;
+    font-size: var(--size-h2);
     text-align: center;
     text-shadow: 0.1rem 0.1rem 0.1rem #5D5D5D;
-    text-transform: uppercase;
 }
 
 .etape__une h3 {
@@ -746,6 +601,11 @@ form button {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-top: 10rem;
+}
+
+.connexion h2 {
+    font-size: 3rem;
 }
 
 .connexion a {
@@ -772,6 +632,11 @@ form button {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-top: 10rem;
+}
+
+.inscription h2 {
+    font-size: 3rem;
 }
 
 .inscription label {
@@ -793,6 +658,7 @@ form button {
 /********************************** User ******************************************/
 .user {
     width: 100%;
+    padding-top: 15rem;
 }
 
 .user__profil {
@@ -821,6 +687,7 @@ form button {
     text-align: center;
     display: flex;
     flex-direction: column;
+    padding-top: 15rem;
 }
 
 .user__data h2 {
@@ -869,6 +736,7 @@ form button {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding-top: 15rem;
 }
 
 .user__update label {
@@ -894,6 +762,7 @@ form button {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding-top: 15rem;
 }
 
 .user__facture h2 {
@@ -918,6 +787,7 @@ form button {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding-top: 15rem;
 }
 
 .user__devis h2 {
@@ -938,7 +808,7 @@ form button {
 /********************************** Admin ******************************************/
 .admin {
     width: 100%;
-    padding: 2rem;
+    padding-top: 10rem;
 }
 
 .admin__profil {
@@ -967,9 +837,10 @@ form button {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
-
+    padding-top: 10rem;
 }
+
+
 
 .company h2 {
     margin: 0;
@@ -1021,7 +892,7 @@ form {
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding-top: 10rem;
 }
 
 .admin__data__company h2 {
@@ -1071,7 +942,7 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
+    padding-top: 10rem;
 }
 
 .admin__update__company label {
@@ -1096,7 +967,7 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
+    padding-top: 10rem;
 }
 
 .admin__add__company label {
@@ -1122,7 +993,7 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
+    padding-top: 10rem;
 }
 .admin__facture__add {
     background-color: var(--color-two);
@@ -1153,7 +1024,7 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
+    padding-top: 10rem;
 }
 
 .admin__add__facture h2{
@@ -1173,7 +1044,7 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
+    padding-top: 10rem;
 
 }
 .admin__devis__add {
@@ -1205,7 +1076,7 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
+    padding-top: 10rem;
 
 }
 
@@ -1230,8 +1101,8 @@ form {
     }
 
 /*********************************** Logo du site **************************/
-    .navbar__logo a h1 {
-        font-size: 3.7rem;
+    .navbar__logo a p {
+        font-size: var(--size-logo);
     }
 
 /*********************************** Menu burger **************************/
@@ -1256,18 +1127,23 @@ form {
         transform: translateY(-.9rem);
     }
 
-/*********************************** Welcome **************************/
-    #welcome h2 {
+/*********************************** header-home **************************/
+    #header-home {
+        height: 100vh;
+        padding: 35vh 0 45vh 0;
+}
+
+    #header-home h2 {
         font-size: 8rem;
         margin-top: 2rem;
     }
 
-    #welcome figure img {
+    #header-home figure img {
         width: 45rem;
         height: 30rem;
     }
 
-    #welcome p {
+    #header-home p {
         font-size: 2.8rem;
         margin-bottom: 2rem;
     }
@@ -1290,33 +1166,23 @@ form {
         font-weight: bold;
         margin-bottom: 2rem;
     }
-/**************************************** Section Services ******************************************/
-    #services h2 {
+/**************************************** Section missions ******************************************/
+    #missions h2 {
         font-size: 6rem;
         margin-top: 2rem;
     }
 
-    .services__container {
+    .container__missions {
         flex-wrap: wrap;
+        flex-direction: row;
         margin-top: 3rem;
         margin-bottom: 3rem;
     }
 
-    .services__administratif {
-        width: 50%;
+    .container__missions__card {
+        width: 45%;
     }
 
-    .services__commerciale {
-        width: 50%;
-    }
-
-    .services__reseaux {
-        width: 50%;
-    }
-
-    .services__autres {
-        width: 50%;
-    }
 
 /*********************************** Offre confort *************************************************/
     #offres h2 {
@@ -1324,7 +1190,7 @@ form {
     }
 
     #offres img {
-        width: 25rem;
+        width: 22rem;
         height: 35rem;
     }
 
@@ -1336,9 +1202,9 @@ form {
         font-size: 2rem;
     }
 
-    .offres__epanouissement {
+    /*.offres__epanouissement {
         margin-bottom: 4rem;
-    }
+    }*/
 
     .offres__color {
         margin-bottom: 4rem;
@@ -1390,6 +1256,11 @@ form {
 
 
 /********************************** Connexion ******************************************/
+    
+    .connexion {
+        padding-top: 15rem;
+    }
+    
     .connexion form {
         width: 50%;
     }
@@ -1493,6 +1364,7 @@ form {
     /********************************** Admin company ******************************************/
     .company {
         margin-bottom: 4rem;
+        padding-top: 15rem;
     }
     .company h2 {
         font-size: 4rem;
@@ -1514,6 +1386,7 @@ form {
     /********************************** Admin data company ******************************************/
     .admin__data__company {
         margin-bottom: 4rem;
+        padding-top: 15rem;
     }
 
     .admin__data__company h2{
@@ -1540,6 +1413,7 @@ form {
 
     .admin__update__company {
         margin-bottom: 4rem;
+        padding-top: 15rem;
     }
 
     .admin__update__company h2 {
@@ -1558,6 +1432,7 @@ form {
     /********************************** Admin add company ******************************************/
     .admin__add__company {
         margin-bottom: 4rem;
+        padding-top: 15rem;
     }
 
     .admin__add__company h2 {
@@ -1577,6 +1452,7 @@ form {
     /********************************** Admin facture ******************************************/
     .admin__facture {
         margin-bottom: 4rem;
+        padding-top: 15rem;
     }
 
     .admin__facture h2 {
@@ -1595,6 +1471,7 @@ form {
     /********************************** Admin add facture ******************************************/
     .admin__add__facture {
         margin-bottom: 4rem;
+        padding-top: 15rem;
     }
 
     .admin__add__facture h2{
@@ -1608,6 +1485,7 @@ form {
     /********************************** Admin devis ******************************************/
     .admin__devis {
         margin-bottom: 4rem;
+        padding-top: 15rem;
     }
 
     .admin__devis h2 {
@@ -1626,6 +1504,7 @@ form {
     /********************************** Admin add devis ******************************************/
     .admin__add__devis {
         margin-bottom: 4rem;
+        padding-top: 15rem;
     }
 
     .admin__add__devis h2{
@@ -1645,8 +1524,8 @@ form {
         justify-content: center;
     }
     /***********************************  LOGO *********************************************/
-    .navbar__logo a h1 {
-        font-size: 4.2rem;
+    .navbar__logo a p {
+        font-size: var(--size-logo);
     }
     /***********************************  icone authentification *********************************************/
     .iconify {
@@ -1662,7 +1541,8 @@ form {
         flex-direction: row;
         justify-content: center;
         background-color: var(--color-one);
-        margin-top: 3rem;
+        /*margin-top: 3rem;*/
+        margin: 0;
     }
 
     .navbar__links li {
@@ -1677,10 +1557,7 @@ form {
         color: var(--color-two);
         text-shadow: 0.1rem 0.1rem 0.1rem #56432e;
     }
-    /***********************************  main *********************************************/
-    main {
-        padding-top: 15rem;
-    }
+
     /***********************************  about *********************************************/
     .about__leila {
         display: flex;
@@ -1688,14 +1565,14 @@ form {
     }
     /***********************************  services *********************************************/
 
-    .services__container {
+    .container__missions {
         display: flex;
         flex-direction: row;
     }
 
-    .services__container div {
-        width: 40%;
-    }
+    /*.container__missions div {
+        width: 45%;
+    }*/
 
     /***********************************  offres *********************************************/
 
@@ -1723,5 +1600,10 @@ form {
 
     .etape__trois {
         padding-left: 5rem;
+    }
+
+/*************************************** Section Travailler avec moi *****************************/
+    .admin__profil {
+        padding-top: 8rem;
     }
 }

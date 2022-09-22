@@ -11,23 +11,17 @@ class UserController extends Controller{
 
     public function showData() 
     {
-        $stmt = $this->db->getPDO()->query('SELECT * FROM users JOIN entreprises ON users.id = entreprises.users_id');
-        $data = $stmt->fetchAll();
-        return $this->view('users.userDataCompany', compact('data'));
+        return $this->view('users.userDataCompany');
     }
 
     public function showFacture()
     {
-        $stmt = $this->db->getPDO()->query('SELECT * FROM users JOIN facture ON users.id = facture.users_id');
-        $facture = $stmt->fetchAll();
-        return $this->view('users.userFacture', compact('facture'));
+        return $this->view('users.userFacture');
     }
 
     public function showDevis()
     {
-        $stmt = $this->db->getPDO()->query('SELECT * FROM users JOIN devis ON users.id = devis.users_id');
-        $devis = $stmt->fetchAll();
-        return $this->view('users.userDevis', compact('devis'));
+        return $this->view('users.userDevis');
     }
 
     public function showUpdate()

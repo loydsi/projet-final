@@ -13,7 +13,7 @@ menu.addEventListener("click", function () {
   burgerButton.classList.toggle("active");
 });
 
-// verification formulaire connexion
+// verification formulaires
 
 let form = document.querySelector("#myForm");
 
@@ -48,7 +48,9 @@ form.code_postal.addEventListener("keyup", function () {
 form.ville.addEventListener("keyup", function () {
   validVille(this);
 });
+
 // Vérification du mail
+
 const validMail = function (inputMail) {
   let regexMail = new RegExp(
     "^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$"

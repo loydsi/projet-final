@@ -4,36 +4,36 @@
     <h2>Mes Données</h2>
 
     <table class="user__data__company">
-        <?php foreach($params['data'] as $data): ?>
+       
         <tr>
             <td>Nom de L'entreprise</td>
-            <td><?= $data->nom_entreprise ?></td>
+            <td>Essai entreprise</td>
         </tr>
         <tr>
             <td>Email</td>
-            <td><?= $data->mail ?></td>
+            <td>essai@mail.fr</td>
         </tr>
         <tr>
             <td>Telephone</td>
-            <td><?= $data->telephone ?></td>
+            <td>0667665961</td>
         </tr>
         <tr>
             <td>Siret</td>
-            <td><?= $data->siret ?></td>
+            <td>442 293 775 00031</td>
         </tr>
         <tr>
             <td>Adresse</td>
-            <td><?= $data->adresse ?></td>
+            <td>4, rue de l'essai</td>
         </tr>
         <tr>
             <td>Code Postal</td>
-            <td><?= $data->code_postal ?></td>
+            <td>33000</td>
         </tr>
         <tr>
             <td>Ville</td>
-            <td><?= $data->ville ?></td>
+            <td>Bordeaux</td>
         </tr>
-        <?php endforeach; ?>
+       
     </table>
 
     <table class="user__data__facture">

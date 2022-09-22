@@ -7,6 +7,13 @@ use App\Controllers\Controller;
 
 class EntrepriseController extends Controller {
 
+    public function index()
+    {
+        $this->isAdmin();
+
+        return $this->view('admin.admin');
+    }
+
     public function showCompany() 
     {
         $this->isAdmin();
@@ -14,13 +21,11 @@ class EntrepriseController extends Controller {
         $company = new Company($this->getDB());
         $companys = $company->all();
 
-        return $this->view('admin.adminCompany', compact('companys')); /*compact('page'));  A voir */
+        return $this->view('admin.adminCompany', compact('companys'));
     }
 
     public function create()
     {
-        
-
         return $this->view('admin.adminFormCompany');
     }
 

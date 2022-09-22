@@ -7,9 +7,9 @@
     <title>Leyila's Agency</title>
     <script src="https://kit.fontawesome.com/997c887ce5.js" crossorigin="anonymous"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
             </div>
             
             <div class="navbar__logo">
-                <a href="/" class="navbar__logo"><h1>Leyla's Agency</h1></a>
+                <a href="/" class="navbar__logo"><p>Leyla's Agency</p></a>
             </div>
             
 
@@ -33,26 +33,26 @@
             <ul class="navbar__links">
                 <li>
                     <!-- A voir -->
-                    <a href="/#about" class="navbar-links">A propos</a>
+                    <a href="/#about">A propos</a>
                 </li>  
                 <li>
-                    <a href="/#offres" class="navbar-links">Mes offres</a>
+                    <a href="/#missions">Missions</a>
                 </li>  
                 <li>
-                    <a href="/#services" class="navbar-links">Mes services</a>
+                    <a href="/#offres">Offres</a>
                 </li>
                 <li>
-                    <a href="/#footer" class="navbar-links">Contact</a>
+                    <a href="/#footer">Contact</a>
                 </li>
                 <li>
-                    <a href="/compte" class="navbar-links">mon compte</a>
+                    <a href="/compte">mon compte</a>
                 </li>
                 <li>
-                    <a href="/login" class="navbar-links">Connexion</a>
+                    <a href="/login">Connexion</a>
                 </li>
                 <?php if (isset($_SESSION['roles'])): ?>
                 <li>
-                    <a href="/logout" class="navbar-links"><i class="fa-solid fa-xmark"></i></a>
+                    <a href="/logout"><i class="fa-solid fa-xmark"></i></a>
                 </li>
                 <?php endif ?>
             </ul>
@@ -75,10 +75,10 @@
                     <a href="/#about">A propos</a>
                 </li>  
                 <li>
-                    <a href="/#offres">Mes offres</a>
+                    <a href="/#missions">Missions</a>
                 </li>  
                 <li>
-                    <a href="/#services">Mes services</a>
+                    <a href="/#offres">Offres</a>
                 </li>
                 <li>
                     <a href="/#contact">Contact</a>
